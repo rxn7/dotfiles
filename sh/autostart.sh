@@ -5,8 +5,6 @@ xset r rate 120 30
 
 killall dwmblocks ; dwmblocks &
 killall volumeicon ; volumeicon &
-killall flameshot ; flameshot &
-killall polkit-gnome-authentication-agent-1 ; /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 killall dunst ; dunst &
 killall xrootgif ; xrootgif /home/rxn/pics/wallpapers/lake.gif &
 killall xcompmgr ; xcompmgr &
