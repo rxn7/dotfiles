@@ -1,6 +1,5 @@
 #!/bin/bash
 
-declare -a programs
 programs=(
 	"dwmblocks"
 	"volumeicon"
