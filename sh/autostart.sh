@@ -4,7 +4,7 @@ programs=(
 	"dwmblocks"
 	"volumeicon"
 	"dunst"
-	"xrootgif /home/rxn/pics/wallpapers/lake.gif"
+	"xrootgif /home/rxn/pics/wallpapers/firesword.gif"
 	"xcompmgr"
 	"volumeicon"
 	"polkit-dumb-agent"
