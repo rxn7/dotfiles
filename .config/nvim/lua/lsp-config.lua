@@ -17,7 +17,13 @@ end
 
 local servers = { 'omnisharp', 'pyright', 'rust_analyzer', 'tsserver', 'ccls' }
 for _, serv in pairs(servers) do
+	local cmd = {}
+	if serv == 'omnisharp' then
+		cmd = { "/bin/omnisharp", "--languageserver", "--hostPID", tostring(vim.fn.getpid()) }
+	end
+
 	nvim_lsp[serv].setup {
+		cmd = cmd,
 		on_attach = on_attach
 	}
 end
