@@ -1,7 +1,8 @@
+export  _JAVA_AWT_WM_NONREPARENTING=1
 export EDITOR=nvim
 export TERMINAL=alacritty
 export BROWSER=firefox
-export FILEMAN=nemo
+export FILEMAN=pcmanfm
 
 alias dotfiles="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 
@@ -9,10 +10,11 @@ alias die="sudo poweroff"
 alias rbt="sudo reboot"
 
 alias v="$EDITOR"
+alias vim="$EDITOR"
 alias s="sudo"
 alias mi="make install"
-alias ll="ls -lA"
-alias ls="ls"
+alias ll="ls -lA --color"
+alias ls="ls --color"
 alias mf="mkf"
 alias md="mkdir"
 alias fm="vifm"

@@ -1,21 +1,19 @@
-vim.o.completeopt = 'menu,menuone,noselect'
-vim.o.scrolloff = 5
-vim.o.sidescrolloff = 5 vim.wo.number = true vim.wo.relativenumber = true
+vim.opt.completeopt = 'menu,menuone,noselect'
+vim.opt.scrolloff = 5
+vim.opt.sidescrolloff = 5 vim.wo.number = true vim.wo.relativenumber = true
 vim.wo.signcolumn = 'number'
 vim.wo.wrap = false
-vim.o.tabstop = 8
+vim.opt.tabstop = 8
 vim.bo.tabstop = 8
-vim.o.softtabstop = 8
-vim.bo.softtabstop = 8
-vim.o.shiftwidth = 8
-vim.bo.shiftwidth = 8
-vim.o.updatetime = 300
-vim.o.hidden = true
-vim.o.backup = false
-vim.o.swapfile = false
-vim.o.background = 'dark'
-vim.o.clipboard = 'unnamedplus'
-vim.o.guicursor = 'n-v-c-sm-i:block,ci-ve:ver25,r-cr-o:hor20'
+vim.opt.updatetime = 300
+vim.opt.hidden = true
+vim.opt.backup = false
+vim.opt.swapfile = false
+vim.opt.background = 'dark'
+vim.opt.clipboard = 'unnamedplus' vim.opt.guicursor = 'n-v-c-sm-i:block,ci-ve:ver25,r-cr-o:hor20'
+vim.opt.laststatus = 2
+vim.opt.showtabline = 2
+vim.opt.showmode = false
 
 vim.cmd[[ au BufNewFile,BufRead *.ejs set filetype=html ]]
 

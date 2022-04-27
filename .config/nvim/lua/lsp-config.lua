@@ -15,18 +15,17 @@ local on_attach = function(client, bufnr)
 	buf_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
 end
 
-local servers = { 'omnisharp', 'pyright', 'rust_analyzer', 'tsserver', 'ccls' }
+local servers = { 'pyright', 'rust_analyzer', 'tsserver', 'ccls' }
 for _, serv in pairs(servers) do
-	local cmd = {}
-	if serv == 'omnisharp' then
-		cmd = { "/bin/omnisharp", "--languageserver", "--hostPID", tostring(vim.fn.getpid()) }
-	end
-
 	nvim_lsp[serv].setup {
-		cmd = cmd,
 		on_attach = on_attach
 	}
 end
+
+nvim_lsp.omnisharp.setup {
+	cmd = { "/bin/omnisharp", "--languageserver", "--hostPID", tostring(vim.fn.getpid()) },
+	on_attach = on_attach
+}
 
 local cmp = require('cmp')
 cmp.setup {
@@ -39,7 +38,6 @@ cmp.setup {
 	sources = {
 		{ name = 'nvim_lsp' },
 		{ name = 'vsnip' },
-		{ name = 'treesitter' },
 		{ name = 'path' },
 	},
 
