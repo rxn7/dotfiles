@@ -38,5 +38,11 @@ require('packer').startup(
 				require('nvim-tree').setup()
 			end
 		}
+		use {
+			'joshdick/onedark.vim'
+		}
+		use {
+			'voldikss/vim-floaterm'
+		}
 	end
 )

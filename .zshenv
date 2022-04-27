@@ -9,6 +9,7 @@ alias dotfiles="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 alias die="sudo poweroff"
 alias rbt="sudo reboot"
 
+alias maims="maim --select"
 alias v="$EDITOR"
 alias vim="$EDITOR"
 alias s="sudo"

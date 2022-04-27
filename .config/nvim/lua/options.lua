@@ -17,8 +17,5 @@ vim.opt.showmode = false
 
 vim.cmd[[ au BufNewFile,BufRead *.ejs set filetype=html ]]
 
--- Colors
-vim.o.termguicolors = true
-vim.cmd('colorscheme gruvbox')
-vim.cmd('highlight Normal guibg=none')
-vim.cmd('highlight NonText guibg=none')
+vim.opt.termguicolors = true;
+vim.cmd('colorscheme onedark')

@@ -5,7 +5,6 @@ programs=(
 	"volumeicon"
 	"dunst"
 	"xrootgif /home/rxn/pics/wallpapers/firesword.gif"
-	"xcompmgr"
 	"volumeicon"
 	"polkit-dumb-agent"
 );
