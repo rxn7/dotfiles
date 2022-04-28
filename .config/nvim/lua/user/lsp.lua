@@ -13,7 +13,7 @@ local on_attach = function(client, bufnr)
 	buf_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
 end
 
-local servers = { 'pyright', 'rust_analyzer', 'tsserver', 'ccls' }
+local servers = { 'pyright', 'rust_analyzer', 'ccls' }
 for _, serv in pairs(servers) do
 	nvim_lsp[serv].setup {
 		on_attach = on_attach
@@ -43,6 +43,11 @@ nvim_lsp.sumneko_lua.setup {
 			},
 		},
 	},
+}
+
+nvim_lsp.tsserver.setup {
+	on_attach = on_attach,
+  	root_dir = function() return vim.loop.cwd() end
 }
 
 local cmp = require('cmp')

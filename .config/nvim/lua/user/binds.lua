@@ -16,10 +16,10 @@ map('n', '<space>cp', ':source ~/.config/nvim/init.lua<cr>:PackerCompile<cr>:Pac
 
 map('n','<C-space>',':FloatermToggle<cr>',opts)
 map('t','<C-space>','<C-\\><C-n>:FloatermToggle<cr>',opts)
-map('t','<C-t>h','<C-\\><C-n>:FloatermPrev<cr>',opts)
-map('t','<C-t>l','<C-\\><C-n>:FloatermNext<cr>',opts)
-map('t','<C-t>n','<C-\\><C-n>:FloatermNew<cr>',opts)
-map('t','<C-t>d','<C-\\><C-n>:FloatermKill<cr>:FloatermToggle<cr>',opts)
+map('t','<C-h>','<C-\\><C-n>:FloatermPrev<cr>',opts)
+map('t','<C-l>','<C-\\><C-n>:FloatermNext<cr>',opts)
+map('t','<C-n>','<C-\\><C-n>:FloatermNew<cr>',opts)
+map('t','<C-d>','<C-\\><C-n>:FloatermKill<cr>:FloatermToggle<cr>',opts)
 
 map('i', '<Up>', '<Nop>',opts);
 map('i', '<Down>', '<Nop>',opts);

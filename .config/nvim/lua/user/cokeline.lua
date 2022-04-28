@@ -104,7 +104,7 @@ require('cokeline').setup({
 		components.separator,
 		components.devicon,
 		components.filename,
-		components.space,
 		components.unsaved,
+		components.space,
 	},
 })
