@@ -65,28 +65,18 @@ local config = {
 	},
 }
 
--- Inserts a component in lualine_c at left section
 local function ins_left(component)
 	table.insert(config.sections.lualine_c, component)
 end
 
--- Inserts a component in lualine_x ot right section
 local function ins_right(component)
 	table.insert(config.sections.lualine_x, component)
 end
 
 ins_left {
-	function()
-		return '▊'
-	end,
-	color = { fg = colors.blue }, -- Sets highlighting of component
-	padding = { left = 0, right = 1 }, -- We don't need space before this
-}
-
-ins_left {
 	-- mode component
 	function()
-		return ''
+		return ' '
 	end,
 	color = function()
 		-- auto change color according to neovims mode
@@ -152,27 +142,6 @@ ins_left {
 	end,
 }
 
-ins_left {
-	-- Lsp server name .
-	function()
-		local msg = 'No Active Lsp'
-		local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
-		local clients = vim.lsp.get_active_clients()
-		if next(clients) == nil then
-			return msg
-		end
-		for _, client in ipairs(clients) do
-			local filetypes = client.config.filetypes
-			if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
-				return client.name
-			end
-		end
-		return msg
-	end,
-	icon = ' LSP:',
-	color = { fg = '#ffffff', gui = 'bold' },
-}
-
 -- Add components to right sections
 ins_right {
 	'o:encoding', -- option component same as &encoding in viml
@@ -206,13 +175,4 @@ ins_right {
 	cond = conditions.hide_in_width,
 }
 
-ins_right {
-	function()
-		return '▊'
-	end,
-	color = { fg = colors.blue },
-	padding = { left = 1 },
-}
-
--- Now don't forget to initialize lualine
 lualine.setup(config)

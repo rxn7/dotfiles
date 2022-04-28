@@ -1,12 +1,8 @@
 local get_hex = require('cokeline/utils').get_hex
-local mappings = require('cokeline/mappings')
-
-local str_rep = string.rep
 
 local green = vim.g.terminal_color_2
 local yellow = vim.g.terminal_color_3
 
-local comments_fg = get_hex('Comment', 'fg')
 local errors_fg = get_hex('DiagnosticError', 'fg')
 local warnings_fg = get_hex('DiagnosticWarn', 'fg')
 
@@ -68,7 +64,7 @@ local components = {
 }
 
 require('cokeline').setup({
-	show_if_buffers_are_at_least = 2,
+	show_if_buffers_are_at_least = 1,
 
 	buffers = {
 		filter_valid = function(buffer) return buffer.type ~= 'terminal' end,
