@@ -1,9 +1,7 @@
 local nvim_lsp = require('lspconfig')
-local protocol = require('vim.lsp.protocol')
 
-local on_attach = function(client, bufnr)
+local on_attach = function(bufnr)
 	local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
-	local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
 
 	local opts = { noremap = true, silent = true }
 
@@ -27,6 +25,25 @@ nvim_lsp.omnisharp.setup {
 	on_attach = on_attach
 }
 
+nvim_lsp.sumneko_lua.setup {
+	settings = {
+		Lua = {
+			runtime = {
+				version = 'LuaJIT',
+			},
+			diagnostics = {
+				globals = {'vim'},
+			},
+			workspace = {
+				library = vim.api.nvim_get_runtime_file("", true),
+			},
+			telemetry = {
+				enable = false,
+			},
+		},
+	},
+}
+
 local cmp = require('cmp')
 cmp.setup {
 	snippet = {
@@ -39,6 +56,7 @@ cmp.setup {
 		{ name = 'nvim_lsp' },
 		{ name = 'vsnip' },
 		{ name = 'path' },
+		{ name = 'treesitter' },
 	},
 
 	mapping = {

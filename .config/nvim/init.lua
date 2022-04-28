@@ -1,4 +1,3 @@
-require('plugins')
-require('options')
-require('binds')
-require('netrw-config')
+require('user.plugins')
+require('user.options')
+require('user.binds')
