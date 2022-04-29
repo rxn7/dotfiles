@@ -17,8 +17,8 @@ require('packer').startup(
 				'hrsh7th/cmp-nvim-lsp',
 				'hrsh7th/cmp-vsnip',
 				'hrsh7th/vim-vsnip',
-				'hrsh7th/cmp-path' 
-			} 
+				'hrsh7th/cmp-path'
+			}
 		}
 		use {
 			'nvim-treesitter/nvim-treesitter',
@@ -26,9 +26,9 @@ require('packer').startup(
 			run = ':TSUpdate'
 		}
 		use {
-			'noib3/nvim-cokeline',
+			'akinsho/bufferline.nvim',
 			requires = 'kyazdani42/nvim-web-devicons',
-			config = "require('user.cokeline')"
+			config = "require('user.bufferline')"
 		}
 		use {
 			'nvim-telescope/telescope.nvim',
@@ -46,7 +46,7 @@ require('packer').startup(
 		}
 		use {
 			'navarasu/onedark.nvim',
-			config = "require('user.onedark')" 
+			config = "require('user.onedark')"
 		}
 		use {
 			'voldikss/vim-floaterm'
