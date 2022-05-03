@@ -44,11 +44,6 @@ require('packer').startup(
 			requires = 'kyazdani42/nvim-web-devicons',
 			config = "require('user.lualine')"
 		}
-		use {
-			'navarasu/onedark.nvim',
-			config = "require('user.onedark')"
-		}
-		use {
-			'voldikss/vim-floaterm'
-		}
+		use 'frenzyexists/aquarium-vim'
+		use 'voldikss/vim-floaterm'
 	end)

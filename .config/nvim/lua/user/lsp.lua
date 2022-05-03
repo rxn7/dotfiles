@@ -13,7 +13,7 @@ local on_attach = function(client, bufnr)
 	buf_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
 end
 
-local servers = { 'pyright', 'rust_analyzer', 'ccls' }
+local servers = { 'pyright', 'rust_analyzer', 'ccls', 'java_language_server' }
 for _, serv in pairs(servers) do
 	nvim_lsp[serv].setup {
 		on_attach = on_attach

@@ -2,10 +2,8 @@
 
 programs=(
 	"dwmblocks"
-	"volumeicon"
 	"dunst"
 	"xrootgif /home/rxn/Pics/wallpapers/firesword.gif"
-	"volumeicon"
 	"polkit-dumb-agent"
 );
 

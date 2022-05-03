@@ -18,4 +18,4 @@ vim.opt.showmode = false
 vim.cmd[[ au BufNewFile,BufRead *.ejs set filetype=html ]]
 
 vim.opt.termguicolors = true;
-vim.cmd('colorscheme onedark')
+vim.cmd('colorscheme aquarium')
