@@ -5,4 +5,4 @@ mute=$(pamixer --get-mute)
 icon="ﰝ"
 [ "$mute" = "true" ] && icon="遼"
 
-printf "%s %s" $icon $volume
+printf "%s %s%%" $icon $volume
