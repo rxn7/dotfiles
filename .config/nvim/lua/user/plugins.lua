@@ -1,8 +1,6 @@
 vim.cmd('packadd packer.nvim')
 require('packer').startup(
 	function()
-		use 'morhetz/gruvbox'
-
 		use {
 			'mattn/emmet-vim',
 			config = "require('user.emmet')"
@@ -21,11 +19,6 @@ require('packer').startup(
 			}
 		}
 		use {
-			'nvim-treesitter/nvim-treesitter',
-			config = "require('user.treesitter')",
-			run = ':TSUpdate'
-		}
-		use {
 			'akinsho/bufferline.nvim',
 			requires = 'kyazdani42/nvim-web-devicons',
 			config = "require('user.bufferline')"
@@ -39,11 +32,5 @@ require('packer').startup(
 			requires = 'kyazdani42/nvim-web-devicons',
 			config = "require('user.nvim-tree')"
 		}
-		use {
-			'nvim-lualine/lualine.nvim',
-			requires = 'kyazdani42/nvim-web-devicons',
-			config = "require('user.lualine')"
-		}
-		use 'frenzyexists/aquarium-vim'
 		use 'voldikss/vim-floaterm'
 	end)

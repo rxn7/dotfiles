@@ -13,7 +13,7 @@ local on_attach = function(client, bufnr)
 	buf_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
 end
 
-local servers = { 'pyright', 'rust_analyzer', 'ccls', 'java_language_server' }
+local servers = { 'pyright', 'rust_analyzer', 'ccls', 'java_language_server', 'gdscript' }
 for _, serv in pairs(servers) do
 	nvim_lsp[serv].setup {
 		on_attach = on_attach
@@ -43,6 +43,16 @@ nvim_lsp.sumneko_lua.setup {
 			},
 		},
 	},
+}
+
+nvim_lsp.arduino_language_server.setup {
+	cmd = {
+		-- Required
+		"arduino-language-server",
+		-- Optional
+		"-cli", "arduino-cli",
+		"-clangd", "clangd"
+	}
 }
 
 nvim_lsp.tsserver.setup {

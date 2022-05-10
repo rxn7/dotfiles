@@ -1,3 +1,5 @@
 require('user.plugins')
 require('user.options')
+require('user.colors')
 require('user.binds')
+require('user.statusline')

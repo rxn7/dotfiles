@@ -3,7 +3,6 @@ local map = vim.api.nvim_set_keymap
 
 map('n','<C-s>',':w<cr>',opts)
 map('i','<C-c>','<esc>',opts)
-map('n','<C-S>',':wa<cr>',opts);
 
 map('n','<S-l>',':BufferLineCycleNext<cr>',opts);
 map('n','<S-h>',':BufferLineCyclePrev<cr>',opts);
