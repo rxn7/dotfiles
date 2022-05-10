@@ -1,6 +1,6 @@
 export  _JAVA_AWT_WM_NONREPARENTING=1
 export EDITOR=nvim
-export TERMINAL=alacritty
+export TERMINAL=urxvt
 export BROWSER=firefox
 export FILEMAN=pcmanfm
 
@@ -8,6 +8,7 @@ alias dotfiles="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 
 alias die="sudo poweroff"
 alias rbt="sudo reboot"
+alias c="clear"
 
 alias nf="neofetch"
 alias maims="maim --select"
