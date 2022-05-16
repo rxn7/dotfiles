@@ -23,14 +23,11 @@ require('packer').startup(
 			config = "require('user.bufferline')"
 		}
 		use {
-			'nvim-telescope/telescope.nvim',
-			requires = 'nvim-lua/plenary.nvim',
-		}
-		use {
 			'kyazdani42/nvim-tree.lua',
 			requires = 'kyazdani42/nvim-web-devicons',
 			config = "require('user.nvim-tree')"
 		}
+		use 'cloudhead/neovim-fuzzy'
 		use 'voldikss/vim-floaterm'
 		use 'leafgarland/typescript-vim'
 	end)

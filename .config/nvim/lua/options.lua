@@ -21,4 +21,3 @@ vim.cmd[[ au BufNewFile,BufRead *.ejs set filetype=html ]]
 
 -- Colors
 vim.o.termguicolors = true
-vim.cmd('colorscheme zenburn')

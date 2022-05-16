@@ -8,10 +8,8 @@ map('n','<S-l>',':BufferLineCycleNext<cr>',opts);
 map('n','<S-h>',':BufferLineCyclePrev<cr>',opts);
 map('n','<C-b>d',':bd<cr>',opts);
 
-map('n','<C-p>',':Telescope find_files<cr>',opts)
+map('n','<C-p>',':FuzzyOpen<cr>',opts)
 map('n','<C-f>',':NvimTreeToggle<cr>',opts)
-
-map('n', '<space>cp', ':source ~/.config/nvim/init.lua<cr>:PackerCompile<cr>:PackerInstall<cr>',opts)
 
 map('n','<C-space>',':FloatermToggle<cr>',opts)
 map('t','<C-space>','<C-\\><C-n>:FloatermToggle<cr>',opts)

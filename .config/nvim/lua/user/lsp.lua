@@ -60,6 +60,13 @@ nvim_lsp.tsserver.setup {
   	root_dir = function() return vim.loop.cwd() end
 }
 
+
+local capabilities = vim.lsp.protocol.make_client_capabilities();
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+nvim_lsp.cssls.setup {
+	capabilities = capabilities,
+}
+
 local cmp = require('cmp')
 cmp.setup {
 	snippet = {
