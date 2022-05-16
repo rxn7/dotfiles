@@ -1,5 +1,7 @@
 vim.cmd('colorscheme default')
 vim.highlight.link("LineNr", "Comment", true)
+vim.highlight.create("PMenu", { guibg = "#807b0a", guifg = "#fff" }, false)
+vim.highlight.create("String", { guibg = 1, guifg = "#e8e11c" }, false)
 vim.highlight.create("NormalFloat", { guibg = "None", guifg = "None" }, false)
 vim.highlight.create("FloatBorder", { guibg = "None" }, false)
 vim.highlight.create("WhichKeyFloat", { guibg = "None" }, false)
@@ -10,14 +12,10 @@ vim.highlight.create("TelescopeBorder", { guibg = "None", guifg = "None" }, fals
 vim.highlight.link("TelescopeMatching", "Constant", true)
 vim.highlight.create("StatusLine", { guibg = "None" }, false)
 vim.highlight.create("StatusLineNC", { guibg = "None" }, false)
--- Errors
 vim.highlight.create("LspDiagnosticsVirtualTextError", { guifg = "Red", ctermfg = "Red", gui = "bold" }, false)
 vim.highlight.create("DiagnosticVirtualTextError", { guifg = "Red", ctermfg = "Red", gui = "bold" }, false)
--- Warnings
 vim.highlight.create("LspDiagnosticsVirtualTextWarning", { guifg = "Yellow", ctermfg = "Yellow" }, false)
 vim.highlight.create("DiagnosticVirtualTextWarn", { guifg = "Yellow", ctermfg = "Yellow" }, false)
--- Info & Hints
 vim.highlight.create("DiagnosticVirtualTextInfo", { guifg = "White", ctermfg = "White" }, false)
 vim.highlight.create("DiagnosticVirtualTextHint", { guifg = "White", ctermfg = "White" }, false)
--- Comment in italics
 vim.highlight.create("Comment", { gui = "italic", cterm = "italic" }, false)

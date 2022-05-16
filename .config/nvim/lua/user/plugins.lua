@@ -4,8 +4,7 @@ require('packer').startup(
 		use {
 			'mattn/emmet-vim',
 			config = "require('user.emmet')"
-		}
-		use {
+		} use {
 			'neovim/nvim-lspconfig',
 			config = "require('user.lsp')"
 		}
@@ -33,4 +32,5 @@ require('packer').startup(
 			config = "require('user.nvim-tree')"
 		}
 		use 'voldikss/vim-floaterm'
+		use 'leafgarland/typescript-vim'
 	end)
