@@ -3,7 +3,7 @@
 programs=(
 	"dwmblocks"
 	"dunst"
-	"xrootgif /home/rxn/Pics/wallpapers/tiles.gif"
+	"xrootgif /home/rxn/pics/wallpapers/tiles.gif"
 	"polkit-dumb-agent"
 );
 
