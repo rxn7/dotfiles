@@ -18,8 +18,7 @@ zstyle ':vcs_info:*' get-revision true
 zstyle ':vcs_info:*' unstagedstr '*'
 zstyle ':vcs_info:*' stagedstr '+'
 zstyle ':vcs_info:*' formats $'\Uf418 %b%c%u \Uf417 %.7i '
-zstyle ':vcs_info:*' actionformats $'\Uf418 %b%c%u (%a) \Uf417 %.7i '
-zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
+zstyle ':vcs_info:*' actionformats $'\Uf418 %b%c%u (%a) \Uf417 %.7i ' zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
 +vi-git-untracked(){
     if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) == 'true' ]] && \
         git status --porcelain | grep '??' &> /dev/null ; then

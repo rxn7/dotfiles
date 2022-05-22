@@ -13,7 +13,6 @@ require('packer').startup(
 			requires = {
 				'hrsh7th/cmp-nvim-lsp',
 				'hrsh7th/cmp-vsnip',
-				'hrsh7th/vim-vsnip',
 				'hrsh7th/cmp-path'
 			}
 		}
@@ -27,7 +26,16 @@ require('packer').startup(
 			requires = 'kyazdani42/nvim-web-devicons',
 			config = "require('user.nvim-tree')"
 		}
-		use 'cloudhead/neovim-fuzzy'
+		use {
+			'junegunn/fzf.vim',
+			requires = 'junegunn/fzf'
+		}
+		use {
+			'/feline-nvim/feline.nvim',
+			config = "require('user.statusline')"
+		}
+		use 'nvim-treesitter/nvim-treesitter'
 		use 'voldikss/vim-floaterm'
 		use 'leafgarland/typescript-vim'
+		use 'Th3Whit3Wolf/space-nvim'
 	end)

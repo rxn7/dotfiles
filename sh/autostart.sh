@@ -5,6 +5,7 @@ programs=(
 	"dunst"
 	"xrootgif /home/rxn/pics/wallpapers/tiles.gif"
 	"polkit-dumb-agent"
+	"emacs --daemon"
 );
 
 # Settings

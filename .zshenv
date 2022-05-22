@@ -1,12 +1,11 @@
 export  _JAVA_AWT_WM_NONREPARENTING=1
 export EDITOR=nvim
-export TERMINAL=urxvt
-export BROWSER=chromium
+export TERMINAL=alacritty
+export BROWSER=brave
 export FILEMAN=pcmanfm
 
 alias dotfiles="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 
-alias chromium="chromium --disable-infobars"
 alias die="sudo poweroff"
 alias rbt="sudo reboot"
 alias c="clear"

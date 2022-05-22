@@ -8,7 +8,7 @@ map('n','<S-l>',':BufferLineCycleNext<cr>',opts);
 map('n','<S-h>',':BufferLineCyclePrev<cr>',opts);
 map('n','<C-b>d',':bd<cr>',opts);
 
-map('n','<C-p>',':FuzzyOpen<cr>',opts)
+map('n','<C-p>',':Files<cr>',opts)
 map('n','<C-f>',':NvimTreeToggle<cr>',opts)
 
 map('n','<C-space>',':FloatermToggle<cr>',opts)
