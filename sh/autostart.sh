@@ -1,11 +1,11 @@
 #!/bin/bash
 
 programs=(
-	"dwmblocks"
+	"rxbar"
 	"dunst"
 	"xrootgif /home/rxn/pics/wallpapers/tiles.gif"
 	"polkit-dumb-agent"
-	"emacs --daemon"
+	"sxhkd"
 );
 
 # Settings
@@ -21,7 +21,6 @@ restart() {
 	$cmd &>/dev/null & disown;
 }
 
-for prog in "${programs[@]}"
-do
+for prog in "${programs[@]}"; do
 	restart $prog
 done

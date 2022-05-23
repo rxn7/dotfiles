@@ -10,6 +10,7 @@ alias die="sudo poweroff"
 alias rbt="sudo reboot"
 alias c="clear"
 
+alias nm="neomutt"
 alias nf="neofetch"
 alias maims="maim --select"
 alias v="$EDITOR"
