@@ -16,6 +16,4 @@ vim.opt.showtabline = 2
 vim.opt.showmode = false
 
 vim.cmd[[ au BufNewFile,BufRead *.ejs set filetype=html ]]
-
 vim.o.termguicolors = true
-vim.cmd[[ colorscheme space-nvim ]]

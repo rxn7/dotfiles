@@ -34,7 +34,10 @@ require('packer').startup(
 			'/feline-nvim/feline.nvim',
 			config = "require('user.statusline')"
 		}
-		use 'nvim-treesitter/nvim-treesitter'
+		use {
+			'nvim-treesitter/nvim-treesitter' ,
+			config = "require('user.treesitter')"
+		}
 		use 'voldikss/vim-floaterm'
 		use 'leafgarland/typescript-vim'
 		use 'Th3Whit3Wolf/space-nvim'

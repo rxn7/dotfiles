@@ -48,14 +48,14 @@ local vi_mode_colors = {
 }
 
 local vi_mode_text = {
-  NORMAL = '<|',
+  NORMAL = 'NORMAL',
   OP = '<|',
-  INSERT = '|>',
-  VISUAL = '<>',
-  LINES = '<>',
-  BLOCK = '<>',
-  REPLACE = '<>',
-  ['V-REPLACE'] = '<>',
+  INSERT = 'INSERT',
+  VISUAL = 'VISUAL',
+  LINES = 'LINES',
+  BLOCK = 'BLOCK',
+  REPLACE = 'REPLACE',
+  ['V-REPLACE'] = 'V-REPLACE',
   ENTER = '<>',
   MORE = '<>',
   SELECT = '<>',
@@ -98,7 +98,7 @@ force_inactive.buftypes = {
 
 -- vi-mode
 components.active[1][1] = {
-  provider = ' NVIM ',
+  provider = ' RXN ',
   hl = function()
     local val = {}
 

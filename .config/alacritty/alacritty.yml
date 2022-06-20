@@ -1,6 +1,6 @@
 font:
   normal:
-    family: Jetbrains Mono Nerd Font Mono
+    family: Iosevka Nerd Font Mono
     style: Regular
 
   size: 15
@@ -21,3 +21,6 @@ colors:
     magenta: '0xc678dd'
     cyan:    '0x56b6c2'
     white:   '0x828791'
+
+window:
+  opacity: 0.8

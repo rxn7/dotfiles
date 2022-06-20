@@ -1,8 +1,9 @@
 export  _JAVA_AWT_WM_NONREPARENTING=1
 export EDITOR=nvim
-export TERMINAL=alacritty
-export BROWSER=brave
+export TERMINAL=urxvt
+export BROWSER=chromium
 export FILEMAN=pcmanfm
+export PATH="/opt/android-sdk/platform-tools/:$PATH"
 
 alias dotfiles="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 

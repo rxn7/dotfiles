@@ -1,16 +1,15 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 programs=(
 	"rxbar"
 	"dunst"
-	"xrootgif /home/rxn/pics/wallpapers/tiles.gif"
 	"polkit-dumb-agent"
-	"sxhkd"
+	"xrootgif /home/rxn/pics/wallpapers/tree.gif"
 );
 
 # Settings
-xrandr --output DP-1 --rate 144 --mode 1920x1080 --right-of HDMI-1
-xrandr --output HDMI-1 --rate 144 --mode 1920x1080
+xrandr --output HDMI-A-0 --rate 144 --mode 1920x1080
+xrandr --output DisplayPort-0 --rate 144 --mode 1920x1080 --right-of HDMI-A-0 --primary
 xset r rate 120 30
 setxkbmap pl
 
@@ -24,3 +23,10 @@ restart() {
 for prog in "${programs[@]}"; do
 	restart $prog
 done
+
+pkill polybar
+if type "xrandr" > /dev/null; then
+	for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+		MONITOR=$m polybar main &
+	done
+fi

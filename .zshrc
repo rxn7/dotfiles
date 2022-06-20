@@ -18,3 +18,5 @@ setopt numericglobsort
 setopt nobeep
 setopt histignorealldups
 setopt autocd
+
+echo "https://maciejniziolek.xyz" | lolcat
