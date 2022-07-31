@@ -1,5 +1,5 @@
 autoload -U colors && colors
-PS1="%{$fg[cyan]%}%~ %{$fg[blue]%}>%b "
+PS1="%{$fg[cyan]%}%~ %{$fg[blue]%}❯%b "
 
 # Tab Completion
 autoload -U compinit

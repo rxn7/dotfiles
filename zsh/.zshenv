@@ -1,7 +1,7 @@
 export  _JAVA_AWT_WM_NONREPARENTING=1
 export EDITOR=nvim
-export TERMINAL=urxvt
-export BROWSER=chromium
+export TERMINAL=alacritty
+export BROWSER=brave
 export FILEMAN=pcmanfm
 export PATH="/opt/android-sdk/platform-tools/:$PATH"
 
@@ -10,6 +10,7 @@ alias dotfiles="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 alias die="sudo poweroff"
 alias rbt="sudo reboot"
 alias c="clear"
+alias py="python3"
 
 alias nm="neomutt"
 alias nf="neofetch"
