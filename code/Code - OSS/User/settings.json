@@ -1,0 +1,43 @@
+{
+    "editor.useTabStops": true,
+    "editor.tabSize": 8,
+    "editor.fontSize": 16,
+    "editor.fontFamily": "Iosevka Nerd Font Mono",
+    "editor.guides.bracketPairs": false,
+    "editor.guides.indentation": false,
+    "editor.glyphMargin": false,
+    "editor.scrollbar.horizontal": "hidden",
+    "editor.scrollbar.vertical": "hidden",
+    "editor.scrollbar.horizontalScrollbarSize": 0,
+    "editor.scrollbar.verticalScrollbarSize": 0,
+    "editor.insertSpaces": false,
+    "editor.detectIndentation": false,
+    "editor.minimap.enabled": false,
+    "editor.autoClosingBrackets": "never",
+    "editor.autoClosingQuotes": "never",
+    "editor.inlayHints.enabled": "off",
+
+    "explorer.confirmDelete": false,
+
+    "javascript.updateImportsOnFileMove.enabled": "always",
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"workbench.activityBar.visible": false,
+	"workbench.sideBar.location": "right",
+
+	"breadcrumbs.enabled": false,
+	"workbench.iconTheme": "material-icon-theme",
+
+	"files.exclude": {
+		"**/.git": true,
+		"**/.svn": true,
+		"**/.hg": true,
+		"**/CVS": true,
+		"**/.DS_Store": true,
+		"**/Thumbs.db": true,
+		"**/package-lock.json": true,
+	},
+	"workbench.startupEditor": "none",
+	"workbench.colorTheme": "Steffula Code",
+	"omnisharp.useModernNet": false,
+	"omnisharp.enableAsyncCompletion": true,
+}
