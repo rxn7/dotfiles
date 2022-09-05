@@ -8,11 +8,10 @@ require('packer').startup(function()
 			'nvim-lua/plenary.nvim'
 		}
 	}
-	use 'ms-jpq/chadtree'
-
+	use 'kyazdani42/nvim-tree.lua'
 	use 'hrsh7th/cmp-nvim-lsp'
 	use 'hrsh7th/nvim-cmp'
-	use 'hrsh7th/cmd-cmdline'
-	use 'hrsh7th/cmd-path'
+	use 'hrsh7th/cmp-cmdline'
+	use 'hrsh7th/cmp-path'
 	use 'neovim/nvim-lspconfig'
 end)
