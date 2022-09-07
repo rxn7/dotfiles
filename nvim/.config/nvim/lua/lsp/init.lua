@@ -1,3 +1,12 @@
+require('lsp.sumneko_lua')
+require('lsp.css')
+require('lsp.html')
+require('lsp.json')
+require('lsp.prisma')
+require('lsp.sumneko_lua')
+require('lsp.typescript')
+require('lsp.clangd')
+
 local lsp_config = require('lspconfig')
 local cmp = require('cmp')
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
@@ -18,7 +27,3 @@ cmp.setup({
 		 { name = 'path' },
 	},
 })
-
-lsp_config.tsserver.setup({ capabilities = capabilities, })
-lsp_config.clangd.setup({ capabilities = capabilities, })
-lsp_config.sumneko_lua.setup(require('lsp/sumneko_lua'))

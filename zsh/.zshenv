@@ -1,11 +1,8 @@
 export  _JAVA_AWT_WM_NONREPARENTING=1
 export EDITOR=nvim
 export TERMINAL=alacritty
-export BROWSER=brave
 export FILEMAN=pcmanfm
-export PATH="/opt/android-sdk/platform-tools/:$PATH"
-
-alias dotfiles="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+export PATH=$PATH:~/.local/bin:~/.emacs.d/bin
 
 alias die="sudo poweroff"
 alias rbt="sudo reboot"
