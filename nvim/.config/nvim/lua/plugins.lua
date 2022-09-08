@@ -3,6 +3,7 @@ require('packer').startup(function()
 	use 'kyazdani42/nvim-web-devicons'
 	use 'kyazdani42/nvim-tree.lua'
 	use 'kyazdani42/blue-moon'
+	use 'nvim-lualine/lualine.nvim'
 
 	-- Telscope
 	use {
@@ -19,6 +20,7 @@ require('packer').startup(function()
 	}
 
 	-- LSP
+	use 'hrsh7th/vim-vsnip'
 	use 'hrsh7th/cmp-nvim-lsp'
 	use 'hrsh7th/nvim-cmp'
 	use 'hrsh7th/cmp-cmdline'

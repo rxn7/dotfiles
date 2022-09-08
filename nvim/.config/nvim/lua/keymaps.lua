@@ -6,7 +6,7 @@ vim.g.mapleader = ' '
 
 keymap('i', '<C-c>', '<esc>')
 keymap('n', '<C-s>', ':w<cr>')
-keymap('n', '<C-p>', ':Telescope find_files<cr>')
+keymap('n', '<leader>ff', ':Telescope find_files<cr>')
 keymap('n', '<leader>fg', ':Telescope live_grep<cr>')
 keymap('n', '<leader>fb', ':Telescope buffers<cr>')
 keymap('n', '<leader>e', ':NvimTreeToggle<cr>')
@@ -19,6 +19,7 @@ keymap('n', 'gd', ':lua vim.lsp.buf.definition()<cr>')
 keymap('n', 'gD', ':lua vim.lsp.buf.declaration()<cr>')
 keymap('n', 'gr', ':lua vim.lsp.buf.references()<cr>')
 keymap('n', 'gi', ':lua vim.lsp.buf.implementation()<cr>')
+keymap('n', '<leader>rn', ':lua vim.lsp.util.rename()<cr>')
 
 keymap('v', '<', '<gv')
 keymap('v', '>', '>gv')

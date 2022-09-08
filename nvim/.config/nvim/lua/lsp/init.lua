@@ -9,7 +9,6 @@ require('lsp.clangd')
 
 local lsp_config = require('lspconfig')
 local cmp = require('cmp')
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 if cmp == nil or lsp_config == nil then return end
 
@@ -22,6 +21,7 @@ cmp.setup({
 		['<cr>'] = cmp.mapping.confirm({ select = true }),
 	},
 	sources = {
+		 { name = 'vsnip' },
 		 { name = 'nvim_lsp' },
 		 { name = 'cmdline' },
 		 { name = 'path' },
