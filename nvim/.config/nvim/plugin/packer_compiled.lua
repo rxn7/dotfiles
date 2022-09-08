@@ -74,6 +74,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["blue-moon"] = {
+    loaded = true,
+    path = "/home/rxn/.local/share/nvim/site/pack/packer/start/blue-moon",
+    url = "https://github.com/kyazdani42/blue-moon"
+  },
   ["cmp-cmdline"] = {
     loaded = true,
     path = "/home/rxn/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
@@ -89,11 +94,6 @@ _G.packer_plugins = {
     path = "/home/rxn/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
-  gruvbox = {
-    loaded = true,
-    path = "/home/rxn/.local/share/nvim/site/pack/packer/start/gruvbox",
-    url = "https://github.com/gruvbox-community/gruvbox"
-  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/rxn/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -108,6 +108,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/rxn/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
     url = "https://github.com/kyazdani42/nvim-tree.lua"
+  },
+  ["nvim-treesitter"] = {
+    loaded = true,
+    path = "/home/rxn/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
     loaded = true,

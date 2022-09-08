@@ -2,7 +2,7 @@ export  _JAVA_AWT_WM_NONREPARENTING=1
 export EDITOR=nvim
 export TERMINAL=alacritty
 export FILEMAN=pcmanfm
-export PATH=$PATH:~/.local/bin:~/.emacs.d/bin
+export PATH=$PATH:~/.local/bin/sumneko_lua/bin/
 
 alias die="sudo poweroff"
 alias rbt="sudo reboot"
