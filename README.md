@@ -1,3 +1,8 @@
+# Installation
+```git clone https://github.com/rxtthin/dotfiles```   
+```cd dotfiles```  
+```stow *```   
+
 # Requirements
 ## Programs
 - [Alacritty](https://github.com/alacritty/alacritty)
