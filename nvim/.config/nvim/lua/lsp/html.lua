@@ -4,7 +4,7 @@ capabilities.textDocument.completion.completionItem.snipperSupport = true
 require('lspconfig').html.setup({
 	capabilities = capabilities,
 	cmd = {
-		"vscode-html-language-server",
+		"html-languageserver",
 		"--stdio"
 	},
 	filetypes = {

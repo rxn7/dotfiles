@@ -94,6 +94,11 @@ _G.packer_plugins = {
     path = "/home/rxn/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
+  ["emmet-vim"] = {
+    loaded = true,
+    path = "/home/rxn/.local/share/nvim/site/pack/packer/start/emmet-vim",
+    url = "https://github.com/mattn/emmet-vim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/rxn/.local/share/nvim/site/pack/packer/start/lualine.nvim",
