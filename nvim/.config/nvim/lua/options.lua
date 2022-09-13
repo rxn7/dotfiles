@@ -17,3 +17,4 @@ vim.opt.completeopt = 'menu,menuone,noselect,noinsert'
 vim.opt.hidden = true
 vim.opt.hidden = true
 vim.opt.mouse = 'a'
+vim.opt.swapfile = false

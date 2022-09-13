@@ -6,6 +6,7 @@ require('lsp.prisma')
 require('lsp.sumneko_lua')
 require('lsp.typescript')
 require('lsp.clangd')
+require('lsp.rust')
 
 local lsp_config = require('lspconfig')
 local cmp = require('cmp')

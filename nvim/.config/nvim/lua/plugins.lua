@@ -5,6 +5,8 @@ require('packer').startup(function()
 	use 'kyazdani42/blue-moon'
 	use 'nvim-lualine/lualine.nvim'
 
+        use 'voldikss/vim-floaterm'
+
 	-- Telscope
 	use {
 		'nvim-telescope/telescope.nvim',
