@@ -4,6 +4,7 @@ require('packer').startup(function()
 	use 'kyazdani42/nvim-tree.lua'
 	use 'kyazdani42/blue-moon'
 	use 'nvim-lualine/lualine.nvim'
+        use 'sheerun/vim-polyglot'
 
         use 'voldikss/vim-floaterm'
 

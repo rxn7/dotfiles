@@ -149,6 +149,11 @@ _G.packer_plugins = {
     path = "/home/rxn/.local/share/nvim/site/pack/packer/start/vim-floaterm",
     url = "https://github.com/voldikss/vim-floaterm"
   },
+  ["vim-polyglot"] = {
+    loaded = true,
+    path = "/home/rxn/.local/share/nvim/site/pack/packer/start/vim-polyglot",
+    url = "https://github.com/sheerun/vim-polyglot"
+  },
   ["vim-vsnip"] = {
     loaded = true,
     path = "/home/rxn/.local/share/nvim/site/pack/packer/start/vim-vsnip",

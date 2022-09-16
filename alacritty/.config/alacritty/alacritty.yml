@@ -3,6 +3,9 @@ font:
   normal:
     family: VictorMono Nerd Font Mono
 
+window:
+  opacity: 0.9
+
 schemes:
 #   https://github.com/ghifarit53/tokyonight-vim
 tokyo-night: &tokyo-night
