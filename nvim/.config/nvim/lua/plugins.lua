@@ -2,11 +2,10 @@ require('packer').startup(function()
 	use 'wbthomason/packer.nvim'
 	use 'kyazdani42/nvim-web-devicons'
 	use 'kyazdani42/nvim-tree.lua'
-	use 'kyazdani42/blue-moon'
+	use 'phha/zenburn.nvim'
 	use 'nvim-lualine/lualine.nvim'
-        use 'sheerun/vim-polyglot'
-
-        use 'voldikss/vim-floaterm'
+	use 'sheerun/vim-polyglot'
+	use 'voldikss/vim-floaterm'
 
 	-- Telscope
 	use {

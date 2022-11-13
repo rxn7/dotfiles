@@ -74,11 +74,6 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  ["blue-moon"] = {
-    loaded = true,
-    path = "/home/rxn/.local/share/nvim/site/pack/packer/start/blue-moon",
-    url = "https://github.com/kyazdani42/blue-moon"
-  },
   ["cmp-cmdline"] = {
     loaded = true,
     path = "/home/rxn/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
@@ -158,6 +153,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/rxn/.local/share/nvim/site/pack/packer/start/vim-vsnip",
     url = "https://github.com/hrsh7th/vim-vsnip"
+  },
+  ["zenburn.nvim"] = {
+    loaded = true,
+    path = "/home/rxn/.local/share/nvim/site/pack/packer/start/zenburn.nvim",
+    url = "https://github.com/phha/zenburn.nvim"
   }
 }
 
