@@ -4,7 +4,7 @@ font:
     family: JetbrainsMono Nerd Font Mono
 
 window:
-  opacity: 0.9
+  opacity: 0.8
 
 colors:
   # Default colors

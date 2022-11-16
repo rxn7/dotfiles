@@ -1,12 +1,17 @@
 local pid = vim.fn.getpid()
+local util = require('lspconfig').util
+
 require('lspconfig').omnisharp.setup {
 	cmd = { "omnisharp", "--languageserver", "--hostPID", tostring(pid) },
-	enable_editorconfig_support = true,
-	enable_ms_build_load_projects_on_demand = false,
-	enable_roslyn_analyzers = false,
-	enable_import_completion = false,
-	sdk_include_prereleases = true,
-	on_attach = function(client)
-		require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+	capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities()),
+	root_dir = function(file, _)
+		if file:sub(-#".csx") == ".csx" then
+			return util.path.dirname(file)
+		end
+		return util.root_pattern("*.sln")(file) or util.root_pattern("*.csproj")(file)
+	end,
+	use_mono = true,
+	on_attach = function(_, bufnr)
+		vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 	end
 }

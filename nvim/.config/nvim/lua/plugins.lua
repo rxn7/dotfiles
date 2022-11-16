@@ -22,11 +22,10 @@ require('packer').startup(function()
 	}
 
 	-- LSP
-	use 'hrsh7th/vim-vsnip'
 	use 'hrsh7th/cmp-nvim-lsp'
 	use 'hrsh7th/nvim-cmp'
 	use 'hrsh7th/cmp-cmdline'
 	use 'hrsh7th/cmp-path'
 	use 'neovim/nvim-lspconfig'
-        use 'mattn/emmet-vim'
+	use 'mattn/emmet-vim'
 end)
