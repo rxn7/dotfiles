@@ -194,12 +194,13 @@ globalkeys = gears.table.join(
             end
         end,
         {description = "go back", group = "client"}),
-    -- Standard program
+
     awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
               {description = "open a terminal", group = "launcher"}),
     awful.key({modkey}, "p", function () awful.spawn('rofi -show drun') end,
               {description = "open rofi", group = "client"}),
-    awful.key({ modkey,           }, "w", function () awful.spawn(os.getenv("BROWSER")) end,
+    awful.key({modkey}, "e", function () awful.spawn(os.getenv('FILEMAN')) end,
+              {description = "open rofi", group = "client"}), awful.key({ modkey,           }, "w", function () awful.spawn(os.getenv("BROWSER")) end,
               {description = "open a web browser", group = "client"}),
     awful.key({ modkey, "Shift" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
@@ -409,10 +410,6 @@ awful.rules.rules = {
 }
 
 client.connect_signal("manage", function (c)
-    c.shape = function(cr, w, h)
-        gears.shape.rounded_rect(cr, w, h, 5)
-    end
-
     if awesome.startup
       and not c.size_hints.user_position
       and not c.size_hints.program_position then
