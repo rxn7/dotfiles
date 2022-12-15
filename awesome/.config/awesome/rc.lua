@@ -24,8 +24,7 @@ do
         in_error = true
 
         naughty.notify({ preset = naughty.config.presets.critical,
-                         title = "Oops, an error happened!",
-                         text = tostring(err) })
+                         title = "Oops, an error happened!", text = tostring(err) })
         in_error = false
     end)
 end
@@ -141,6 +140,7 @@ awful.screen.connect_for_each_screen(function(s)
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             wibox.widget.systray(),
+            require("battery-widget") {},
             mytextclock,
             s.mylayoutbox,
         },

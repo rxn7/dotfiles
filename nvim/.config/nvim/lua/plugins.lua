@@ -2,10 +2,17 @@ require('packer').startup(function()
 	use 'wbthomason/packer.nvim'
 	use 'kyazdani42/nvim-web-devicons'
 	use 'kyazdani42/nvim-tree.lua'
-	use 'phha/zenburn.nvim'
 	use 'nvim-lualine/lualine.nvim'
 	use 'sheerun/vim-polyglot'
 	use 'voldikss/vim-floaterm'
+
+	use {
+		'samodostal/image.nvim',
+		requires = {
+			'nvim-lua/plenary.nvim',
+			'm00qek/baleia.nvim'
+		}
+	}
 
 	-- Telscope
 	use {
@@ -15,11 +22,7 @@ require('packer').startup(function()
 		}
 	}
 
-	-- Treesitter
-	use {
-		'nvim-treesitter/nvim-treesitter',
-		run = ":TSUpdate",
-	}
+	use 'nvim-treesitter/nvim-treesitter'
 
 	-- LSP
 	use 'hrsh7th/cmp-nvim-lsp'

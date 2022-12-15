@@ -7,7 +7,7 @@ theme.wallpaper = "~/.config/awesome/theme/wallpaper.png"
 -- }}}
 
 -- {{{ Styles
-theme.font      = "Jetbrains Mono Nerd Font 8"
+theme.font      = "Jetbrains Mono Nerd Font 10"
 
 -- {{{ Colors
 theme.fg_normal  = "#DCDCCC"

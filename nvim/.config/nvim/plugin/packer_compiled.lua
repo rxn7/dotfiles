@@ -74,6 +74,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["baleia.nvim"] = {
+    loaded = true,
+    path = "/home/rxn/.local/share/nvim/site/pack/packer/start/baleia.nvim",
+    url = "https://github.com/m00qek/baleia.nvim"
+  },
   ["cmp-cmdline"] = {
     loaded = true,
     path = "/home/rxn/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
@@ -93,6 +98,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/rxn/.local/share/nvim/site/pack/packer/start/emmet-vim",
     url = "https://github.com/mattn/emmet-vim"
+  },
+  ["image.nvim"] = {
+    loaded = true,
+    path = "/home/rxn/.local/share/nvim/site/pack/packer/start/image.nvim",
+    url = "https://github.com/samodostal/image.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -148,16 +158,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/rxn/.local/share/nvim/site/pack/packer/start/vim-polyglot",
     url = "https://github.com/sheerun/vim-polyglot"
-  },
-  ["vim-vsnip"] = {
-    loaded = true,
-    path = "/home/rxn/.local/share/nvim/site/pack/packer/start/vim-vsnip",
-    url = "https://github.com/hrsh7th/vim-vsnip"
-  },
-  ["zenburn.nvim"] = {
-    loaded = true,
-    path = "/home/rxn/.local/share/nvim/site/pack/packer/start/zenburn.nvim",
-    url = "https://github.com/phha/zenburn.nvim"
   }
 }
 
