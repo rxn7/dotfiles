@@ -2,7 +2,7 @@ export  _JAVA_AWT_WM_NONREPARENTING=1
 export EDITOR=nvim
 export TERMINAL=alacritty
 export FILEMAN=pcmanfm
-export BROWSER=firefox
+export BROWSER=brave
 export PATH=$PATH:~/.local/bin:~/.local/bin/sumneko_lua/bin/:~/.local/bin/godot/
 
 alias die="sudo poweroff"
@@ -17,6 +17,7 @@ alias v="$EDITOR"
 alias vim="$EDITOR"
 alias s="sudo"
 alias mi="make install"
+alias ls="ls -l --color"
 alias ll="ls -lA --color"
 alias mf="mkf"
 alias md="mkdir"

@@ -149,11 +149,6 @@ _G.packer_plugins = {
     path = "/home/rxn/.local/share/nvim/site/pack/packer/start/vim-polyglot",
     url = "https://github.com/sheerun/vim-polyglot"
   },
-  ["vim-vsnip"] = {
-    loaded = true,
-    path = "/home/rxn/.local/share/nvim/site/pack/packer/start/vim-vsnip",
-    url = "https://github.com/hrsh7th/vim-vsnip"
-  },
   ["zenburn.nvim"] = {
     loaded = true,
     path = "/home/rxn/.local/share/nvim/site/pack/packer/start/zenburn.nvim",
