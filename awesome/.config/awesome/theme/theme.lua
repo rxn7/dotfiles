@@ -7,7 +7,7 @@ theme.wallpaper = "~/.wallpapers/arch.png"
 -- }}}
 
 -- {{{ Styles
-theme.font      = "Jetbrains Mono Nerd Font 8"
+theme.font      = "Jetbrains Mono Nerd Font 9"
 
 -- {{{ Colors
 theme.fg_normal  = "#DCDCCC"
@@ -23,7 +23,7 @@ theme.bg_systray = theme.bg_normal
 theme.useless_gap   = dpi(6)
 theme.border_width  = dpi(2)
 theme.border_normal = "#3F3F3F"
-theme.border_focus  = "#F0DFAF"
+theme.border_focus  = "#BBFF77"
 theme.border_marked = "#CC9393"
 -- }}}
 

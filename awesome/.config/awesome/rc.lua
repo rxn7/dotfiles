@@ -11,7 +11,7 @@ os.execute("~/.scripts/autostart.sh")
 
 if awesome.startup_errors then
     naughty.notify({ preset = naughty.config.presets.critical,
-                     title = "Oops, there were errors during startup!",
+                     title = "Startup failed",
                      text = awesome.startup_errors })
 end
 
