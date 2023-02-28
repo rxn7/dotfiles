@@ -10,3 +10,4 @@ xset r rate 300 70
 
 restart volumeicon
 restart devmon
+restart polkit-dumb-agent

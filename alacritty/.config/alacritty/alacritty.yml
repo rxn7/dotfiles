@@ -1,7 +1,7 @@
 font:
-  size: 12
+  size: 14
   normal:
-    family: DaddyTimeMono Nerd Font Mono
+    family: JetBrainsMono Nerd Font
 
 window:
   opacity: 0.8

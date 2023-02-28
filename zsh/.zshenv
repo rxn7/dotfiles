@@ -5,7 +5,7 @@ export FILEMAN=thunar
 export BROWSER=brave
 export PATH=$PATH:~/.local/bin:~/.local/bin/sumneko_lua/bin/:~/.local/bin/godot/
 
-alias die="yay -Syyu && sudo poweroff"
+alias die="yay -Syyu --noconfirm && sudo poweroff"
 alias rbt="sudo reboot"
 alias c="clear"
 alias py="python3"
