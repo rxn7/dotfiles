@@ -1,11 +1,8 @@
-require('packer').startup(function()
-	use 'wbthomason/packer.nvim'
-	use 'kyazdani42/nvim-web-devicons'
-	use 'kyazdani42/nvim-tree.lua'
+require('packer').startup(function(use)
+  -- Look
 	use 'phha/zenburn.nvim'
+	use 'kyazdani42/nvim-web-devicons'
 	use 'nvim-lualine/lualine.nvim'
-	use 'sheerun/vim-polyglot'
-	use 'voldikss/vim-floaterm'
 
 	-- Telscope
 	use {
@@ -28,4 +25,10 @@ require('packer').startup(function()
 	use 'hrsh7th/cmp-path'
 	use 'neovim/nvim-lspconfig'
 	use 'mattn/emmet-vim'
+
+  -- Other
+	use 'wbthomason/packer.nvim'
+	use 'kyazdani42/nvim-tree.lua'
+	use 'sheerun/vim-polyglot'
+	use 'voldikss/vim-floaterm'
 end)
