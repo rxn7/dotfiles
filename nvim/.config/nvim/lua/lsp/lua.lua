@@ -9,7 +9,8 @@ require('lspconfig').lua_ls.setup({
 			},
 			workspace = {
 				-- Make the language server aware of nvim runtime files
-				library = vim.api.nvim_get_runtime_file("", true)
+				library = vim.api.nvim_get_runtime_file("", true),
+        checkThirdParty = false,
 			},
 			telemetry = {
 				enable = false,

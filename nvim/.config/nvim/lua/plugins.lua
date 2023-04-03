@@ -1,5 +1,6 @@
 require('packer').startup(function(use)
   -- Look
+  use "EdenEast/nightfox.nvim"
 	use 'phha/zenburn.nvim'
 	use 'kyazdani42/nvim-web-devicons'
 	use 'nvim-lualine/lualine.nvim'
