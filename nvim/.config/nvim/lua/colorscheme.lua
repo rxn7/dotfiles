@@ -1,2 +1,2 @@
 vim.o.termguicolors = true
-vim.cmd('colorscheme nightfox')
+vim.cmd('colorscheme carbonfox')

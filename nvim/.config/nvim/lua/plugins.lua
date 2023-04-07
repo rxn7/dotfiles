@@ -1,7 +1,6 @@
 require('packer').startup(function(use)
   -- Look
   use "EdenEast/nightfox.nvim"
-	use 'phha/zenburn.nvim'
 	use 'kyazdani42/nvim-web-devicons'
 	use 'nvim-lualine/lualine.nvim'
 
@@ -32,4 +31,11 @@ require('packer').startup(function(use)
 	use 'kyazdani42/nvim-tree.lua'
 	use 'sheerun/vim-polyglot'
 	use 'voldikss/vim-floaterm'
+	use {
+		'akinsho/git-conflict.nvim',
+		tag = "*",
+		config = function()
+			require('git-conflict').setup()
+		end
+	}
 end)

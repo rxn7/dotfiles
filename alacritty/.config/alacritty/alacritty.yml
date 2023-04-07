@@ -1,7 +1,7 @@
 font:
-  size: 14
+  size: 20
   normal:
-    family: JetBrainsMono Nerd Font
+    family: Cozette Vector
 
 window:
   opacity: 0.8

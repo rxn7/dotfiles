@@ -7,6 +7,7 @@ require('lsp.typescript')
 require('lsp.gdscript')
 require('lsp.clangd')
 require('lsp.rust')
+require('lsp.zig')
 require('lsp.omnisharp')
 
 local lsp_config = require('lspconfig')

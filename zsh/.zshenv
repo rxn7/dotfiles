@@ -3,7 +3,7 @@ export EDITOR=nvim
 export TERMINAL=alacritty
 export FILEMAN=thunar
 export BROWSER=brave
-export PATH=$PATH:~/.local/bin:~/.local/bin/sumneko_lua/bin/:~/.local/bin/godot/
+export PATH=$PATH:~/.local/bin:~/.local/bin/sumneko_lua/bin/:~/.local/bin/godot/:~/.nimble/bin
 
 alias die="yay -Syyu --noconfirm && sudo poweroff"
 alias rbt="sudo reboot"
