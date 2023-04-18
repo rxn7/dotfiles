@@ -1,52 +1,46 @@
-require('lsp.css')
-require('lsp.html')
-require('lsp.json')
-require('lsp.prisma')
-require('lsp.lua')
-require('lsp.typescript')
-require('lsp.gdscript')
-require('lsp.clangd')
-require('lsp.rust')
-require('lsp.zig')
-require('lsp.omnisharp')
-
-local lsp_config = require('lspconfig')
+local lspc = require('lspconfig')
 local cmp = require('cmp')
 
-if cmp == nil or lsp_config == nil then return end
+if cmp == nil or lspc == nil then return end
 
 cmp.setup({
 	mapping = {
 		['<C-Space>'] = cmp.mapping.complete(),
-		['<C-e>'] = cmp.mapping.close(),
+		['C-f'] = cmp.mapping.scroll_docs(-4),
+		['C-b'] = cmp.mapping.scroll_docs(4),
+		['<C-e>'] = cmp.mapping.abort(),
 		['<Tab>'] = cmp.mapping.select_next_item(),
 		['<S-Tab>'] = cmp.mapping.select_prev_item(),
-		['<cr>'] = cmp.mapping.confirm({ select = true, cmp.ConfirmBehavior.Replace }),
+		['<cr>'] = cmp.mapping.confirm({ select = false }),
 	},
 	sources = {
 		{ name = 'nvim_lsp' },
-		{ name = 'cmdline' },
+		{ name = 'vsnip' },
 		{ name = 'path' },
+		{ name = 'buffer' },
+	},
+	window = {
+		completion = cmp.config.window.bordered(),
+		documentation = cmp.config.window.bordered(),
 	},
 	snippet = {
 		expand = function(args)
-			local _, lnum, col, _ = unpack(vim.fn.getpos("."))
-			local ltext = vim.api.nvim_buf_get_lines(0, lnum - 1, lnum, true)[1]
-			if args.body:match('\n') ~= nil then
-				local indent = string.match(ltext, '^%s*')
-				local lines = vim.split(args.body, '\n', true)
-				lines[1] = (string.match(ltext, '%S.*') or '')..lines[1]
-				if indent ~= '' then
-					for i, line in ipairs(lines) do
-						lines[i] = indent..line
-					end
-				end
-				vim.api.nvim_buf_set_lines(0, lnum - 1, lnum, true, lines)
-			else
-				local line = ltext:sub(1, col-1) .. args.body .. ltext:sub(col)
-				vim.api.nvim_buf_set_lines(0, lnum - 1, lnum, true, {line})
-			end
-			vim.api.nvim_win_set_cursor(0, {lnum, col+#args.body})
+			vim.fn["vsnip#anonymous"](args.body)
 		end,
 	},
 })
+
+vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
+
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
+require('lsp.css').setup(lspc, capabilities)
+require('lsp.html').setup(lspc, capabilities)
+require('lsp.json').setup(lspc, capabilities)
+require('lsp.prisma').setup(lspc, capabilities)
+require('lsp.lua').setup(lspc, capabilities)
+require('lsp.typescript').setup(lspc, capabilities)
+require('lsp.gdscript').setup(lspc, capabilities)
+require('lsp.clangd').setup(lspc, capabilities)
+require('lsp.rust').setup(lspc, capabilities)
+require('lsp.omnisharp').setup(lspc, capabilities)

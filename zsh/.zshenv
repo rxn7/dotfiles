@@ -3,7 +3,8 @@ export EDITOR=nvim
 export TERMINAL=alacritty
 export FILEMAN=thunar
 export BROWSER=brave
-export PATH=$PATH:~/.local/bin:~/.local/bin/sumneko_lua/bin/:~/.local/bin/godot/:~/.nimble/bin
+
+export PATH=$PATH:~/.local/bin:~/.local/bin/sumneko_lua/bin/:~/.local/bin/godot/:~/.nimble/bin:/usr/lib/emsdk:/usr/lib/emsdk/node/14.18.2_64bit/bin:/usr/lib/emsdk/upstream/emscripten
 
 alias die="yay -Syyu --noconfirm && sudo poweroff"
 alias rbt="sudo reboot"

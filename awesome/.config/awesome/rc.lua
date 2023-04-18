@@ -191,7 +191,7 @@ globalkeys = gears.table.join(
     awful.key({ modkey }, "p", function() awful.spawn('rofi -show drun') end,
         { description = "open rofi", group = "client" }),
     awful.key({ modkey }, "e", function() awful.spawn(os.getenv('FILEMAN')) end,
-        { description = "open rofi", group = "client" }),
+        { description = "open file manager", group = "client" }),
     awful.key({ modkey, }, "w", function() awful.spawn(os.getenv("BROWSER")) end,
         { description = "open a web browser", group = "client" }),
     awful.key({ modkey, "Shift" }, "r", awesome.restart,
