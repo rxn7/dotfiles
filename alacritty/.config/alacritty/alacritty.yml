@@ -1,7 +1,7 @@
 font:
-  size: 15
+  size: 18
   normal:
-    family: JetBrains Mono Nerd Font
+    family: LiterationMono NF
 
 window:
   opacity: 0.8

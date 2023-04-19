@@ -1,15 +1,17 @@
 local function keymap(mode, key, command)
-	vim.api.nvim_set_keymap(mode, key, command, { noremap=true, silent=true })
+	vim.api.nvim_set_keymap(mode, key, command, { noremap = true, silent = true })
 end
 
 vim.g.mapleader = ' '
 
+keymap('n', 'Y', 'y$')
 keymap('i', '<C-c>', '<esc>')
 keymap('n', '<C-s>', ':w<cr>')
 
 -- Telescope
 keymap('n', '<leader>ff', ':Telescope find_files<cr>')
 keymap('n', '<leader>fg', ':Telescope live_grep<cr>')
+keymap('n', '<leader>fd', ':Telescope diagnostics<cr>')
 keymap('n', '<leader>fb', ':Telescope buffers<cr>')
 
 -- Nvim Tre

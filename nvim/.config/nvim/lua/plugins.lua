@@ -1,6 +1,6 @@
 require('packer').startup(function(use)
 	-- Look
-	use 'ellisonleao/gruvbox.nvim'
+	use 'kvrohit/rasmus.nvim'
 	use 'kyazdani42/nvim-web-devicons'
 	use 'nvim-lualine/lualine.nvim'
 
@@ -27,7 +27,7 @@ require('packer').startup(function(use)
 	use 'hrsh7th/cmp-buffer'
 	use 'mattn/emmet-vim'
 
-  -- Other
+	use 'cdelledonne/vim-cmake'
 	use 'wbthomason/packer.nvim'
 	use 'kyazdani42/nvim-tree.lua'
 	use 'sheerun/vim-polyglot'

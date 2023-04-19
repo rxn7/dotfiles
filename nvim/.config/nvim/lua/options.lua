@@ -6,7 +6,8 @@ vim.opt.smarttab = true
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
-vim.opt.vartabstop = '' vim.opt.hlsearch = true
+vim.opt.vartabstop = ''
+vim.opt.hlsearch = true
 vim.opt.incsearch = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
@@ -16,7 +17,7 @@ vim.opt.cursorline = false
 vim.opt.wildmenu = true
 vim.opt.completeopt = 'menu,menuone,noselect,noinsert'
 vim.opt.hidden = true
-vim.opt.mouse = ''
+vim.opt.mouse = 'a'
 vim.opt.swapfile = false
 
-vim.cmd('colorscheme gruvbox')
+vim.cmd('colorscheme rasmus')
