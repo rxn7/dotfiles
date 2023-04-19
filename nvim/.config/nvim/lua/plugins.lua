@@ -31,7 +31,7 @@ require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 	use 'kyazdani42/nvim-tree.lua'
 	use 'sheerun/vim-polyglot'
-	use 'voldikss/vim-floaterm'
+	use 'akinsho/toggleterm.nvim'
 	use {
 		'akinsho/git-conflict.nvim',
 		tag = "*",

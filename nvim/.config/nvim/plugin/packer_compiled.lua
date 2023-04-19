@@ -150,15 +150,15 @@ _G.packer_plugins = {
     path = "/home/rxn/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["toggleterm.nvim"] = {
+    loaded = true,
+    path = "/home/rxn/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
+    url = "https://github.com/akinsho/toggleterm.nvim"
+  },
   ["vim-cmake"] = {
     loaded = true,
     path = "/home/rxn/.local/share/nvim/site/pack/packer/start/vim-cmake",
     url = "https://github.com/cdelledonne/vim-cmake"
-  },
-  ["vim-floaterm"] = {
-    loaded = true,
-    path = "/home/rxn/.local/share/nvim/site/pack/packer/start/vim-floaterm",
-    url = "https://github.com/voldikss/vim-floaterm"
   },
   ["vim-polyglot"] = {
     loaded = true,
