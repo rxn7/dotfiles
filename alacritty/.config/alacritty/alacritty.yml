@@ -6,43 +6,36 @@ font:
 window:
   opacity: 0.8
 
+# Colors (Rasmus)
 colors:
   # Default colors
   primary:
-    background: '0x383838'
-    foreground: '0xdcdccc'
+    background: '#1a1a19'
+    foreground: '#d1d1d1'
 
-  # Colors the cursor will use if `custom_cursor_colors` is true
+  # Cursor colors
   cursor:
-    text: '0x383838'
-    cursor: '0xdcdccc'
+    text: '#1a1a19'
+    cursor: '#d1d1d1'
 
   # Normal colors
   normal:
-    black:   '0x383838'
-    red:     '0xdca3a3'
-    green:   '0x5f7f5f'
-    yellow:  '0xe0cf9f'
-    blue:    '0x7cb8bb'
-    magenta: '0xdc8cc3'
-    cyan:    '0x93e0e3'
-    white:   '0xdcdccc'
+    black:   '#333332'
+    red:     '#ff968c'
+    green:   '#61957f'
+    yellow:  '#ffc591'
+    blue:    '#8db4d4'
+    magenta: '#de9bc8'
+    cyan:    '#7bb099'
+    white:   '#d1d1d1'
 
   # Bright colors
   bright:
-    black:   '0x6f6f6f'
-    red:     '0xdca3a3'
-    green:   '0x5f7f5f'
-    yellow:  '0xe0cf9f'
-    blue:    '0x7cb8bb'
-    magenta: '0xdc8cc3'
-    cyan:    '0x93e0e3'
-    white:   '0xffffff'
-
-  indexed_colors:
-    - { index: 16, color: '0xdfaf8f' }
-    - { index: 17, color: '0x000000' }
-    - { index: 18, color: '0x404040' }
-    - { index: 19, color: '0x606060' }
-    - { index: 20, color: '0x808080' }
-    - { index: 21, color: '0xc0c0c0' }
+    black:   '#4c4c4b'
+    red:     '#ffafa5'
+    green:   '#7aae98'
+    yellow:  '#ffdeaa'
+    blue:    '#a6cded'
+    magenta: '#f7b4e1'
+    cyan:    '#94c9b2'
+    white:   '#eaeaea'
