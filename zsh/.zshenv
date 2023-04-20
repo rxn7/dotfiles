@@ -2,7 +2,7 @@ export  _JAVA_AWT_WM_NONREPARENTING=1
 export EDITOR=nvim
 export TERMINAL=alacritty
 export FILEMAN=thunar
-export BROWSER=brave
+export BROWSER=librewolf
 
 export PATH=$PATH:~/.local/bin:~/.local/bin/sumneko_lua/bin/:~/.local/bin/godot/:~/.nimble/bin:/usr/lib/emsdk:/usr/lib/emsdk/node/14.18.2_64bit/bin:/usr/lib/emsdk/upstream/emscripten
 
