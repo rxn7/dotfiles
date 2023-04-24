@@ -1,24 +1,20 @@
 font:
-  size: 18
+  size: 22
   normal:
-    family: LiterationMono NF
+    family: Code New Roman Nerd Font
 
 window:
   opacity: 0.8
 
-# Colors (Rasmus)
 colors:
-  # Default colors
   primary:
-    background: '#1a1a19'
-    foreground: '#d1d1d1'
+    background: '#262626'
+    foreground: '#c7c7c7'
 
-  # Cursor colors
   cursor:
     text: '#1a1a19'
-    cursor: '#d1d1d1'
+    cursor: '#a790d5'
 
-  # Normal colors
   normal:
     black:   '#333332'
     red:     '#ff968c'
@@ -27,9 +23,8 @@ colors:
     blue:    '#8db4d4'
     magenta: '#de9bc8'
     cyan:    '#7bb099'
-    white:   '#d1d1d1'
+    white:   '#c7c7c7'
 
-  # Bright colors
   bright:
     black:   '#4c4c4b'
     red:     '#ffafa5'

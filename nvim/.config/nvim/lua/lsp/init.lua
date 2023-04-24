@@ -30,8 +30,6 @@ cmp.setup({
 	},
 })
 
-vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
-
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 require('lsp.css').setup(lspc, capabilities)
