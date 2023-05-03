@@ -19,6 +19,7 @@ vim.opt.completeopt = 'menu,menuone,noselect,noinsert'
 vim.opt.hidden = true
 vim.opt.mouse = 'a'
 vim.opt.swapfile = false
+vim.opt.laststatus = 3
 
 vim.opt.exrc = true
 

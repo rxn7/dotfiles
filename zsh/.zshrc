@@ -1,7 +1,14 @@
 autoload -U colors && colors
-PS1="%{$fg[yellow]%}%m%{$fg[white]%}:%{$fg[cyan]%}%~ %{$fg[blue]%}❯%b "
 
-# Tab Completion
+setopt correct
+setopt extendedglob
+setopt nocaseglob
+setopt rcexpandparam
+setopt numericglobsort
+setopt nobeep
+setopt histignorealldups 
+setopt autocd
+
 autoload -U compinit
 zstyle ':completion:*' menu select 
 zstyle ':completion:*' completer _complete _correct _approximate
@@ -10,13 +17,13 @@ colors
 _comp_options+=(globdots) 
 compinit
 
-setopt correct
-setopt extendedglob
-setopt nocaseglob
-setopt rcexpandparam
-setopt numericglobsort
-setopt nobeep
-setopt histignorealldups
-setopt autocd
+[[ -r ~/.scripts/znap/znap.zsh ]] ||
+    git clone --depth 1 -- \
+        https://github.com/marlonrichert/zsh-snap.git ~/.scripts/znap
 
-export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+source ~/.scripts/znap/znap.zsh
+
+ZSH_AUTOSUGGEST_STRATEGY=completion
+
+znap prompt sindresorhus/pure
+znap source zsh-users/zsh-autosuggestions

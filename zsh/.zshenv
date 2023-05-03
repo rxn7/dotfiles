@@ -11,11 +11,12 @@ alias rbt="sudo reboot"
 alias c="clear"
 alias py="python3"
 
+alias proton=~/.steam/root/compatibilitytools.d/GE-Proton8-1/proton
+
 alias nm="neomutt"
-alias nf="neofetch"
+alias nf="neofetch --ascii_distro Windows"
 alias maims="maim --select"
 alias v="$EDITOR"
-alias vim="$EDITOR"
 alias s="sudo"
 alias mi="make install"
 alias ls="ls -l --color"
