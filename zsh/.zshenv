@@ -14,7 +14,7 @@ alias py="python3"
 alias proton=~/.steam/root/compatibilitytools.d/GE-Proton8-1/proton
 
 alias nm="neomutt"
-alias nf="neofetch --ascii_distro Windows"
+alias ff="fastfetch"
 alias maims="maim --select"
 alias v="$EDITOR"
 alias s="sudo"

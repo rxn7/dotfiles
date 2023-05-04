@@ -7,7 +7,3 @@ setxkbmap pl
 if [ -z "$(pgrep volumeicon)" ] ; then
 	volumeicon &
 fi
-
-if [ -z "$(pgrep picom)" ] ; then
-	picom --config ~/.config/picom/picom.conf &
-fi

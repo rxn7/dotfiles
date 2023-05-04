@@ -23,6 +23,5 @@ vim.opt.laststatus = 3
 
 vim.opt.exrc = true
 
-vim.opt.termguicolors = true
-vim.opt.background = "dark"
-vim.cmd('colorscheme habamax')
+vim.opt.termguicolors = true vim.opt.background = "dark"
+vim.cmd.colorscheme("warlock")

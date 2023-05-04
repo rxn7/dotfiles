@@ -105,11 +105,6 @@ _G.packer_plugins = {
     path = "/home/rxn/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
-  ["lush.nvim"] = {
-    loaded = true,
-    path = "/home/rxn/.local/share/nvim/site/pack/packer/start/lush.nvim",
-    url = "https://github.com/rktjmp/lush.nvim"
-  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/rxn/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -140,11 +135,6 @@ _G.packer_plugins = {
     path = "/home/rxn/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
-  ["paramount-ng.nvim"] = {
-    loaded = true,
-    path = "/home/rxn/.local/share/nvim/site/pack/packer/start/paramount-ng.nvim",
-    url = "https://github.com/chrsm/paramount-ng.nvim"
-  },
   ["plenary.nvim"] = {
     loaded = true,
     path = "/home/rxn/.local/share/nvim/site/pack/packer/start/plenary.nvim",
@@ -174,6 +164,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/rxn/.local/share/nvim/site/pack/packer/start/vim-vsnip",
     url = "https://github.com/hrsh7th/vim-vsnip"
+  },
+  warlock = {
+    loaded = true,
+    path = "/home/rxn/.local/share/nvim/site/pack/packer/start/warlock",
+    url = "https://github.com/hardselius/warlock"
   }
 }
 

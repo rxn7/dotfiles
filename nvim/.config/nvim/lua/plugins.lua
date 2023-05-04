@@ -1,9 +1,6 @@
 require('packer').startup(function(use)
 	-- Look
-	use {
-		"chrsm/paramount-ng.nvim",
-		requires = { "rktjmp/lush.nvim" }
-	}
+	use 'hardselius/warlock'
 	use 'kyazdani42/nvim-web-devicons'
 	use 'nvim-lualine/lualine.nvim'
 
