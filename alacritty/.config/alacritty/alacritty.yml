@@ -1,7 +1,7 @@
 font:
-  size: 22
+  size: 16
   normal:
-    family: M + 1 Code Nerd Font
+    family: Monoid Nerd Font Mono
 
 window:
   opacity: 0.8
