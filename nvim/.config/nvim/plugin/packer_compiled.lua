@@ -95,10 +95,15 @@ _G.packer_plugins = {
     url = "https://github.com/mattn/emmet-vim"
   },
   ["git-conflict.nvim"] = {
-    config = { "\27LJ\2\n:\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\17git-conflict\frequire\0" },
+    config = { "\27LJ\2\n>\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\17git-conflict\frequire\0" },
     loaded = true,
     path = "/home/rxn/.local/share/nvim/site/pack/packer/start/git-conflict.nvim",
     url = "https://github.com/akinsho/git-conflict.nvim"
+  },
+  ["gruvbox-baby"] = {
+    loaded = true,
+    path = "/home/rxn/.local/share/nvim/site/pack/packer/start/gruvbox-baby",
+    url = "https://github.com/luisiacc/gruvbox-baby"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -115,11 +120,6 @@ _G.packer_plugins = {
     path = "/home/rxn/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
-  ["nvim-tree.lua"] = {
-    loaded = true,
-    path = "/home/rxn/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
-    url = "https://github.com/kyazdani42/nvim-tree.lua"
-  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/home/rxn/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
@@ -129,6 +129,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/rxn/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
+  },
+  ["oxocarbon.nvim"] = {
+    loaded = true,
+    path = "/home/rxn/.local/share/nvim/site/pack/packer/start/oxocarbon.nvim",
+    url = "https://github.com/nyoom-engineering/oxocarbon.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -140,6 +145,12 @@ _G.packer_plugins = {
     path = "/home/rxn/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["ranger.nvim"] = {
+    config = { "\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0+\2\2\0B\0\2\1K\0\1\0\topen\15range-nvim\frequirea\1\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0003\3\4\0=\3\5\2B\0\2\1K\0\1\0\rcallback\0\1\0\1\18replace_netrw\2\nsetup\16ranger-nvim\frequire\0" },
+    loaded = true,
+    path = "/home/rxn/.local/share/nvim/site/pack/packer/start/ranger.nvim",
+    url = "https://github.com/kelly-lin/ranger.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/rxn/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -149,11 +160,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/rxn/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
-  },
-  ["vim-cmake"] = {
-    loaded = true,
-    path = "/home/rxn/.local/share/nvim/site/pack/packer/start/vim-cmake",
-    url = "https://github.com/cdelledonne/vim-cmake"
   },
   ["vim-polyglot"] = {
     loaded = true,
@@ -175,8 +181,12 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Config for: git-conflict.nvim
 time([[Config for git-conflict.nvim]], true)
-try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\17git-conflict\frequire\0", "config", "git-conflict.nvim")
+try_loadstring("\27LJ\2\n>\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\17git-conflict\frequire\0", "config", "git-conflict.nvim")
 time([[Config for git-conflict.nvim]], false)
+-- Config for: ranger.nvim
+time([[Config for ranger.nvim]], true)
+try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0+\2\2\0B\0\2\1K\0\1\0\topen\15range-nvim\frequirea\1\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0003\3\4\0=\3\5\2B\0\2\1K\0\1\0\rcallback\0\1\0\1\18replace_netrw\2\nsetup\16ranger-nvim\frequire\0", "config", "ranger.nvim")
+time([[Config for ranger.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

@@ -4,7 +4,7 @@ export TERMINAL=alacritty
 export FILEMAN=thunar
 export BROWSER=librewolf
 
-export PATH=$PATH:~/.local/bin:~/.local/bin/sumneko_lua/bin/:~/.local/bin/godot/:~/.nimble/bin:/usr/lib/emsdk:/usr/lib/emsdk/node/14.18.2_64bit/bin:/usr/lib/emsdk/upstream/emscripten
+export PATH=$PATH:~/.local/bin:~/.local/bin/sumneko_lua/bin/:~/.local/bin/godot/:~/.nimble/bin:/usr/lib/emsdk:/usr/lib/emsdk/node/14.18.2_64bit/bin:/usr/lib/emsdk/upstream/emscripten:~/.cargo/bin
 
 alias die="yay -Syyu --noconfirm && sudo poweroff"
 alias rbt="sudo reboot"

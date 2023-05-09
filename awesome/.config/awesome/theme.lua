@@ -68,9 +68,4 @@ theme.taglist_squares_unsel = themes_path .. "zenburn/taglist/squarez.png"
 --theme.taglist_squares_resize = "false"
 -- }}}
 
--- {{{ Misc
-theme.awesome_icon           = themes_path .. "zenburn/awesome-icon.png"
-theme.menu_submenu_icon      = themes_path .. "default/submenu.png"
--- }}}
-
 return theme

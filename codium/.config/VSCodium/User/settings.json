@@ -21,5 +21,7 @@
     "editor.fontFamily": "LiterationMono Nerd Font Mono",
     "vim.smartRelativeLine": true,
     "vim.cursorStylePerMode.insert": "block-outline",
-    "editor.inlayHints.enabled": "off"
+    "editor.inlayHints.enabled": "off",
+    "godot_tools.editor_path": "godot3-mono-bin",
+    "window.zoomLevel": 1
 }

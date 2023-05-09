@@ -1,8 +1,20 @@
 require('packer').startup(function(use)
-	-- Look
+	-- Themes
+	use 'luisiacc/gruvbox-baby'
 	use 'hardselius/warlock'
-	use 'kyazdani42/nvim-web-devicons'
-	use 'nvim-lualine/lualine.nvim'
+	use 'nyoom-engineering/oxocarbon.nvim'
+
+	use {
+		'kelly-lin/ranger.nvim',
+		config = function()
+			require("ranger-nvim").setup({
+				replace_netrw = true,
+				callback = function()
+					require("range-nvim").open(true)
+				end
+			})
+		end
+	}
 
 	-- Telscope
 	use {
@@ -27,16 +39,16 @@ require('packer').startup(function(use)
 	use 'hrsh7th/cmp-buffer'
 	use 'mattn/emmet-vim'
 
-	use 'cdelledonne/vim-cmake'
+	use 'kyazdani42/nvim-web-devicons'
+    use 'nvim-lualine/lualine.nvim'
 	use 'wbthomason/packer.nvim'
-	use 'kyazdani42/nvim-tree.lua'
 	use 'sheerun/vim-polyglot'
 	use 'akinsho/toggleterm.nvim'
 	use {
 		'akinsho/git-conflict.nvim',
 		tag = "*",
 		config = function()
-			require('git-conflict').setup()
+			require('git-conflict').setup({})
 		end
 	}
 end)
