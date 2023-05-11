@@ -1,3 +1,7 @@
 [submodule "awesome/.config/awesome/awesome-wm-widgets"]
 	path = awesome/.config/awesome/awesome-wm-widgets
 	url = https://github.com/streetturtle/awesome-wm-widgets
+
+[submodule "scripts/.scripts/zsnap"]
+	path = scripts/.scripts/zsnap
+	url = https://github.com/marlonrichert/zsh-snap.git
