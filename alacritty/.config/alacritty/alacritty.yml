@@ -1,7 +1,7 @@
 font:
-  size: 16
+  size: 26
   normal:
-    family: Monoid Nerd Font Mono
+    family: Unifont
 
 window:
   opacity: 0.8
