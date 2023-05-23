@@ -1,7 +1,7 @@
 font:
-  size: 26
+  size: 16
   normal:
-    family: Unifont
+    family: Hack Nerd Font
 
 window:
   opacity: 0.8

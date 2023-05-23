@@ -27,3 +27,10 @@ ZSH_AUTOSUGGEST_STRATEGY=completion
 
 znap prompt sindresorhus/pure
 znap source zsh-users/zsh-autosuggestions
+
+# bun completions
+[ -s "/home/rxn/.bun/_bun" ] && source "/home/rxn/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
