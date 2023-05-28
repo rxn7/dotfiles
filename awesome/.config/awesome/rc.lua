@@ -107,13 +107,13 @@ local clock_widget = wibox.widget.textclock()
 local separator_widget = wibox.widget.textbox("<span foreground='" .. theme.icon_color .. "'><b> | </b></span>")
 
 local function make_fa_icon(code)
-  return wibox.widget{
-    font = theme.icon_font,
-    markup = ' <span color="'.. theme.icon_color ..'">' .. code .. '</span> ',
-    align  = 'center',
-    valign = 'center',
-    widget = wibox.widget.textbox
-  }
+    return wibox.widget {
+        font   = theme.icon_font,
+        markup = ' <span color="' .. theme.icon_color .. '">' .. code .. '</span> ',
+        align  = 'center',
+        valign = 'center',
+        widget = wibox.widget.textbox
+    }
 end
 
 local fadriveicon = make_fa_icon('\u{f0a0}');
@@ -187,21 +187,22 @@ local globalkeys = gears.table.join(
     awful.key({ modkey }, "]", function() volume_widget:inc(5) end),
     awful.key({ modkey }, "[", function() volume_widget:dec(5) end),
     awful.key({ modkey }, "\\", function() volume_widget:toggle() end),
-
     awful.key({ modkey }, "j", function() awful.client.focus.byidx(1) end),
     awful.key({ modkey }, "k", function() awful.client.focus.byidx(-1) end),
-
     awful.key({ modkey, }, "Return", function() awful.spawn(terminal) end),
     awful.key({ modkey }, "p", function() awful.spawn('rofi -show drun') end),
     awful.key({ modkey }, "e", function() awful.spawn(os.getenv('FILEMAN')) end),
     awful.key({ modkey, }, "w", function() awful.spawn(os.getenv("BROWSER")) end),
-
     awful.key({ modkey, "Shift" }, "j", function() awful.client.swap.byidx(1) end),
     awful.key({ modkey, "Shift" }, "k", function() awful.client.swap.byidx(-1) end),
     awful.key({ modkey, "Control" }, "j", function() awful.screen.focus_relative(1) end),
     awful.key({ modkey, "Control" }, "k", function() awful.screen.focus_relative(-1) end),
     awful.key({ modkey, }, "u", awful.client.urgent.jumpto),
-    awful.key({ modkey, }, "Tab", function() awful.client.focus.history.previous() if client.focus then client.focus:raise() end end),
+    awful.key({ modkey, }, "Tab",
+        function()
+            awful.client.focus.history.previous()
+            if client.focus then client.focus:raise() end
+        end),
     awful.key({ modkey, "Shift" }, "r", awesome.restart),
     awful.key({ modkey, "Shift" }, "c", awesome.quit),
     awful.key({ modkey, }, "l", function() awful.tag.incmwfact(0.05) end),
@@ -276,21 +277,43 @@ root.keys(globalkeys)
 
 local clientbuttons = gears.table.join(
     awful.button({}, 1, function(c) c:emit_signal("request::activate", "mouse click", { raise = true }) end),
-    awful.button({ modkey }, 1, function(c) c:emit_signal("request::activate", "mouse click", { raise = true }) awful.mouse.client.move(c) end),
-    awful.button({ modkey }, 3, function(c) c:emit_signal("request::activate", "mouse click", { raise = true }) awful.mouse.client.resize(c) end)
+    awful.button({ modkey }, 1,
+        function(c)
+            c:emit_signal("request::activate", "mouse click", { raise = true })
+            awful.mouse.client.move(c)
+        end),
+    awful.button({ modkey }, 3,
+        function(c)
+            c:emit_signal("request::activate", "mouse click", { raise = true })
+            awful.mouse.client.resize(c)
+        end)
 )
 
 local clientkeys = gears.table.join(
-    awful.key({ modkey }, "f", function(c) c.fullscreen = not c.fullscreen c:raise() end, { description = "toggle fullscreen", group = "client" }),
+    awful.key({ modkey }, "f", function(c)
+        c.fullscreen = not c.fullscreen
+        c:raise()
+    end, { description = "toggle fullscreen", group = "client" }),
     awful.key({ modkey, "Shift" }, "q", function(c) c:kill() end, { description = "close", group = "client" }),
     awful.key({ modkey }, "space", awful.client.floating.toggle, { description = "toggle floating", group = "client" }),
-    awful.key({ modkey, "Control" }, "Return", function(c) c:swap(awful.client.getmaster()) end, { description = "move to master", group = "client" }),
+    awful.key({ modkey, "Control" }, "Return", function(c) c:swap(awful.client.getmaster()) end,
+        { description = "move to master", group = "client" }),
     awful.key({ modkey }, "o", function(c) c:move_to_screen() end, { description = "move to screen", group = "client" }),
-    awful.key({ modkey }, "t", function(c) c.ontop = not c.ontop end, { description = "toggle keep on top", group = "client" }),
+    awful.key({ modkey }, "t", function(c) c.ontop = not c.ontop end,
+        { description = "toggle keep on top", group = "client" }),
     awful.key({ modkey }, "n", function(c) c.minimized = true end, { description = "minimize", group = "client" }),
-    awful.key({ modkey }, "m", function(c) c.maximized = not c.maximized c:raise() end, { description = "(un)maximize", group = "client" }),
-    awful.key({ modkey, "Control" }, "m", function(c) c.maximized_vertical = not c.maximized_vertical c:raise() end, { description = "(un)maximize vertically", group = "client" }),
-    awful.key({ modkey, "Shift" }, "m", function(c) c.maximized_horizontal = not c.maximized_horizontal c:raise() end, { description = "(un)maximize horizontally", group = "client" })
+    awful.key({ modkey }, "m", function(c)
+        c.maximized = not c.maximized
+        c:raise()
+    end, { description = "(un)maximize", group = "client" }),
+    awful.key({ modkey, "Control" }, "m", function(c)
+        c.maximized_vertical = not c.maximized_vertical
+        c:raise()
+    end, { description = "(un)maximize vertically", group = "client" }),
+    awful.key({ modkey, "Shift" }, "m", function(c)
+        c.maximized_horizontal = not c.maximized_horizontal
+        c:raise()
+    end, { description = "(un)maximize horizontally", group = "client" })
 )
 
 awful.rules.rules = {
@@ -326,7 +349,7 @@ awful.rules.rules = {
             name = {
             },
             role = {
-                "pop-up",        -- e.g. Google Chrome's (detached) Developer Tools.
+                "pop-up", -- e.g. Google Chrome's (detached) Developer Tools.
             }
         },
         properties = { floating = true }

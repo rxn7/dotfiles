@@ -1,7 +1,7 @@
 font:
-  size: 16
+  size: 12
   normal:
-    family: Hack Nerd Font
+    family: Monoid Nerd Font Mono
 
 window:
   opacity: 0.8
