@@ -1,4 +1,6 @@
 {
+  "workbench.welcomePage.extraAnnouncements": false,
+  "workbench.welcomePage.walkthroughs.openOnInstall": false,
   "breadcrumbs.enabled": false,
   "editor.renderControlCharacters": false,
   "editor.renderFinalNewline": "off",
@@ -20,8 +22,8 @@
   "editor.formatOnSave": true,
   "security.workspace.trust.enabled": false,
   "workbench.colorTheme": "Visual Assist Dark Theme",
-  "editor.fontFamily": "Monoid Nerd Font",
-  "editor.fontSize": 16,
+  "editor.fontFamily": "RandyGG Nerd Font",
+  "editor.fontSize": 20,
   "vim.smartRelativeLine": true,
   "vim.cursorStylePerMode.insert": "block-outline",
   "editor.inlayHints.enabled": "off",
@@ -41,5 +43,6 @@
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "window.zoomLevel": -1
+  "window.zoomLevel": -1,
+  "workbench.startupEditor": "none"
 }

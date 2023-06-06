@@ -5,17 +5,16 @@ end
 vim.g.mapleader = ' '
 
 keymap('n', 'Y', 'y$')
-keymap('i', '<C-c>', '<esc>')
-keymap('n', '<C-s>', ':w<cr>')
+keymap('n', '<leader>s', ':w<cr>')
+
+-- Netrw
+keymap('n', '<leader>e', ':Lex!<cr>:vertical resize 30<cr>')
 
 -- Telescope
 keymap('n', '<leader>ff', ':Telescope find_files<cr>')
 keymap('n', '<leader>fg', ':Telescope live_grep<cr>')
 keymap('n', '<leader>fd', ':Telescope diagnostics<cr>')
 keymap('n', '<leader>fb', ':Telescope buffers<cr>')
-
--- Nvim Tre
-keymap('n', '<leader>e', ':NvimTreeToggle<cr>')
 
 -- Move selection
 keymap('x', '<M-j>', 'xp`[V`]')

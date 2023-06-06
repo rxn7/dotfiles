@@ -1,3 +1,4 @@
+vim.g.netrw_banner = 0
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.wrap = true
@@ -20,10 +21,8 @@ vim.opt.hidden = true
 vim.opt.mouse = 'a'
 vim.opt.swapfile = false
 vim.opt.laststatus = 3
-
 vim.opt.exrc = true
-
-vim.opt.termguicolors = true vim.opt.background = 'dark'
-vim.cmd.colorscheme('gruvbox-baby')
-
+vim.opt.termguicolors = true
+vim.opt.background = 'dark'
+vim.cmd.colorscheme('kanagawa')
 vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
