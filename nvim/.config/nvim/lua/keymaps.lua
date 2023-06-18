@@ -7,8 +7,7 @@ vim.g.mapleader = ' '
 keymap('n', 'Y', 'y$')
 keymap('n', '<leader>s', ':w<cr>')
 
--- Netrw
-keymap('n', '<leader>e', ':Lex!<cr>:vertical resize 30<cr>')
+keymap('n', '<leader>e', ':NvimTreeToggle<cr>')
 
 -- Telescope
 keymap('n', '<leader>ff', ':Telescope find_files<cr>')

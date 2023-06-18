@@ -19,7 +19,6 @@
   "editor.scrollbar.vertical": "hidden",
   "editor.scrollbar.horizontalScrollbarSize": 0,
   "editor.scrollbar.verticalScrollbarSize": 0,
-  "editor.formatOnSave": true,
   "security.workspace.trust.enabled": false,
   "workbench.colorTheme": "Visual Assist Dark Theme",
   "editor.fontFamily": "RandyGG Nerd Font",
@@ -44,5 +43,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "window.zoomLevel": -1,
-  "workbench.startupEditor": "none"
+  "workbench.startupEditor": "none",
+  "arduino.useArduinoCli": true,
+  "clangd.detectExtensionConflicts": false
 }

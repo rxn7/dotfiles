@@ -154,7 +154,6 @@ awful.screen.connect_for_each_screen(function(s)
         {
             -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-
             fadriveicon,
             fs_widget(),
             separator_widget,
@@ -184,12 +183,13 @@ end)
 -- }}}
 
 local globalkeys = gears.table.join(
+    awful.key({ modkey }, "s", function() awful.spawn("screengrab") end),
     awful.key({ modkey }, "]", function() volume_widget:inc(5) end),
     awful.key({ modkey }, "[", function() volume_widget:dec(5) end),
     awful.key({ modkey }, "\\", function() volume_widget:toggle() end),
     awful.key({ modkey }, "j", function() awful.client.focus.byidx(1) end),
     awful.key({ modkey }, "k", function() awful.client.focus.byidx(-1) end),
-    awful.key({ modkey, }, "Return", function() awful.spawn(terminal) end),
+    awful.key({ modkey }, "Return", function() awful.spawn(terminal) end),
     awful.key({ modkey }, "p", function() awful.spawn('rofi -show drun') end),
     awful.key({ modkey }, "e", function() awful.spawn(os.getenv('FILEMAN')) end),
     awful.key({ modkey, }, "w", function() awful.spawn(os.getenv("BROWSER")) end),

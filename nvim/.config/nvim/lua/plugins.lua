@@ -1,4 +1,6 @@
 require('packer').startup(function(use)
+	use 'nvim-tree/nvim-tree.lua'
+
 	-- Themes
 	use 'luisiacc/gruvbox-baby'
 	use "rebelot/kanagawa.nvim"
