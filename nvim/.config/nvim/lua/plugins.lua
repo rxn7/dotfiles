@@ -27,6 +27,10 @@ require('packer').startup(function(use)
 	use 'hrsh7th/cmp-path'
 	use 'hrsh7th/cmp-buffer'
 	use 'mattn/emmet-vim'
+	use {
+		'williamboman/mason.nvim',
+		run = ':MasonUpdate',
+	}
 
 	use 'kyazdani42/nvim-web-devicons'
 	use 'nvim-lualine/lualine.nvim'

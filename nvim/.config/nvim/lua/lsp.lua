@@ -30,16 +30,4 @@ cmp.setup({
 	},
 })
 
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
-
-require('lsp.css').setup(lspc, capabilities)
-require('lsp.html').setup(lspc, capabilities)
-require('lsp.json').setup(lspc, capabilities)
-require('lsp.prisma').setup(lspc, capabilities)
-require('lsp.lua').setup(lspc, capabilities)
-require('lsp.typescript').setup(lspc, capabilities)
-require('lsp.gdscript').setup(lspc, capabilities)
-require('lsp.clangd').setup(lspc, capabilities)
-require('lsp.rust').setup(lspc, capabilities)
-require('lsp.omnisharp').setup(lspc, capabilities)
-require('lsp.cmake').setup(lspc, capabilities)
+require('mason').setup()

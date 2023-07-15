@@ -1,4 +1,7 @@
 {
+    "window.titleSeparator": " | ",
+    "window.menuBarVisibility": "hidden",
+    "window.title": "${dirty}${activeEditorShort}${separator}${rootName}",
     "editor.renderLineHighlight": "gutter",
     "editor.detectIndentation": false,
     "editor.tabSize": 4,
@@ -24,8 +27,8 @@
     "editor.scrollbar.horizontalScrollbarSize": 0,
     "editor.scrollbar.verticalScrollbarSize": 0,
     "security.workspace.trust.enabled": false,
-    "workbench.colorTheme": "Visual Assist Dark Theme",
-    "editor.fontFamily": "LiterationMono Nerd Font",
+    "workbench.colorTheme": "Gruvbox Dark Medium",
+    "editor.fontFamily": "RandyGG Nerd Font",
     "editor.fontSize": 20,
     "vim.smartRelativeLine": true,
     "vim.cursorStylePerMode.insert": "block-outline",
@@ -50,5 +53,5 @@
     "arduino.useArduinoCli": true,
     "clangd.detectExtensionConflicts": false,
     "explorer.confirmDelete": false,
-    "window.zoomLevel": -2
+    "workbench.iconTheme": "Monokai Classic Icons",
 }
