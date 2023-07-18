@@ -54,4 +54,5 @@
     "clangd.detectExtensionConflicts": false,
     "explorer.confirmDelete": false,
     "workbench.iconTheme": "Monokai Classic Icons",
+    "window.zoomLevel": -1,
 }

@@ -29,6 +29,7 @@ require('packer').startup(function(use)
 	use 'mattn/emmet-vim'
 	use {
 		'williamboman/mason.nvim',
+		"williamboman/mason-lspconfig.nvim",
 		run = ':MasonUpdate',
 	}
 

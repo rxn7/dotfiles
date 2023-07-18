@@ -129,7 +129,7 @@ awful.screen.connect_for_each_screen(function(s)
     -- Create a taglist widget
     s.taglist = awful.widget.taglist {
         screen  = s,
-        filter  = awful.widget.taglist.filter.all,
+        filter  = awful.widget.taglist.filter.noempty,
         buttons = taglist_buttons
     }
 
@@ -141,7 +141,9 @@ awful.screen.connect_for_each_screen(function(s)
     }
 
     -- Create the wibox
-    s.wibox = awful.wibar({ position = "top", screen = s })
+    s.wibox = awful.wibar({ 
+        position = "top", screen = s 
+    })
 
     -- Add widgets to the wibox
     s.wibox:setup {
@@ -320,6 +322,11 @@ awful.rules.rules = {
     -- All clients will match this rule.
     {
         rule = {},
+        callback = function(c)
+            c.maximized = false
+            c.maximized_vertical = false
+            c.maximized_horizontal = false
+        end,
         properties = {
             border_width = beautiful.border_width,
             border_color = beautiful.border_normal,
@@ -336,11 +343,7 @@ awful.rules.rules = {
     -- Floating clients.
     {
         rule_any = {
-            instance = {
-                "DTA",   -- Firefox addon DownThemAll.
-                "copyq", -- Includes session name in class.
-                "pinentry",
-            },
+            instance = { },
             class = {
                 "Arandr",
                 "Gpick",
@@ -356,12 +359,26 @@ awful.rules.rules = {
     },
 }
 
+local function update_client_shape(c)
+    if not c.fullscreen then
+        c.shape = function(cr, w, h) gears.shape.rounded_rect(cr, w, h, 10) end
+    else
+        c.shape = function(cr, w, h) gears.shape.rectangle(cr, w, h) end
+    end
+end
+
 client.connect_signal("manage", function(c)
     if awesome.startup
         and not c.size_hints.user_position
         and not c.size_hints.program_position then
         awful.placement.no_offscreen(c)
     end
+
+    update_client_shape(c)
+end)
+
+client.connect_signal("property::fullscreen", function(c)
+    update_client_shape(c)
 end)
 
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)

@@ -31,3 +31,26 @@ cmp.setup({
 })
 
 require('mason').setup()
+
+local mason_lspc = require('mason-lspconfig')
+mason_lspc.setup({
+	ensure_installed = {
+		"lua_ls",
+		"clangd",
+		"html",
+		"pyright",
+		"cssls",
+		"cssmodules_ls",
+		"omnisharp",
+		"cmake",
+		"eslint",
+		"tailwindcss"
+	},
+	automatic_installation = true,
+})
+
+mason_lspc.setup_handlers({
+	function(server_name)
+		require("lspconfig")[server_name].setup {}
+	end,
+})
