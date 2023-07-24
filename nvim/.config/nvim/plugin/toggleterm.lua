@@ -1,10 +1,10 @@
 require("toggleterm").setup({
-	size = 50,
+	size = 20,
 	open_mapping = "<C-t>",
 	hide_numbers = true,
 	start_in_insert = true,
 	insert_mappings = true,
-	direction = "vertical",
+	direction = "horizontal",
 	close_on_exit = true,
 	shell = vim.o.shell,
 	auto_scroll = true,
@@ -12,7 +12,6 @@ require("toggleterm").setup({
 
 function _G.set_terminal_keymaps()
 	local opts = { buffer = 0 }
-	vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts)
 	vim.keymap.set('t', '<C-h>', [[<Cmd>wincmd h<CR>]], opts)
 	vim.keymap.set('t', '<C-j>', [[<Cmd>wincmd j<CR>]], opts)
 	vim.keymap.set('t', '<C-k>', [[<Cmd>wincmd k<CR>]], opts)
