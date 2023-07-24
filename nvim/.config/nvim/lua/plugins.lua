@@ -1,11 +1,11 @@
 require('packer').startup(function(use)
-	use 'nvim-tree/nvim-tree.lua'
-
-	-- Themes
+	-- Looks
+	use 'kyazdani42/nvim-web-devicons'
 	use 'luisiacc/gruvbox-baby'
 	use "rebelot/kanagawa.nvim"
+	use 'nvim-lualine/lualine.nvim'
 
-	-- Telscope
+	-- Telescope
 	use {
 		'nvim-telescope/telescope.nvim',
 		requires = {
@@ -33,9 +33,12 @@ require('packer').startup(function(use)
 		run = ':MasonUpdate',
 	}
 
-	use 'kyazdani42/nvim-web-devicons'
-	use 'nvim-lualine/lualine.nvim'
-	use 'wbthomason/packer.nvim'
+	-- Other
+	use { 
+		'wbthomason/packer.nvim',
+		run = ":PackerSync"
+	}
+	use 'nvim-tree/nvim-tree.lua'
 	use 'sheerun/vim-polyglot'
 	use 'akinsho/toggleterm.nvim'
 	use {

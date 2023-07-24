@@ -28,7 +28,7 @@
     "editor.scrollbar.verticalScrollbarSize": 0,
     "security.workspace.trust.enabled": false,
     "workbench.colorTheme": "Gruvbox Dark Medium",
-    "editor.fontFamily": "RandyGG Nerd Font",
+    "editor.fontFamily": "JetBrainsMono Nerd Font Mono",
     "editor.fontSize": 20,
     "vim.smartRelativeLine": true,
     "vim.cursorStylePerMode.insert": "block-outline",

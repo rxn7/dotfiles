@@ -91,7 +91,7 @@ local function set_wallpaper(s)
             wallpaper = wallpaper(s)
         end
 
-        gears.wallpaper.centered(wallpaper, s)
+        gears.wallpaper.fit(wallpaper, s)
     end
 end
 
@@ -141,8 +141,8 @@ awful.screen.connect_for_each_screen(function(s)
     }
 
     -- Create the wibox
-    s.wibox = awful.wibar({ 
-        position = "top", screen = s 
+    s.wibox = awful.wibar({
+        position = "top", screen = s
     })
 
     -- Add widgets to the wibox
@@ -343,7 +343,7 @@ awful.rules.rules = {
     -- Floating clients.
     {
         rule_any = {
-            instance = { },
+            instance = {},
             class = {
                 "Arandr",
                 "Gpick",
