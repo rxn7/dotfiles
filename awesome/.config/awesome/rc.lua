@@ -98,28 +98,16 @@ end
 -- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
 screen.connect_signal("property::geometry", set_wallpaper)
 
+local icons = require("icons").setup(wibox, theme)
+
 local cpu_widget = require("awesome-wm-widgets.cpu-widget.cpu-widget")
 local volume_widget = require("awesome-wm-widgets.volume-widget.volume")
 local ram_widget = require("awesome-wm-widgets.ram-widget.ram-widget")
 local net_widget = require("awesome-wm-widgets.net-speed-widget.net-speed")
 local fs_widget = require("awesome-wm-widgets.fs-widget.fs-widget")
+local todo_widget = require("awesome-wm-widgets.todo-widget.todo")
 local clock_widget = wibox.widget.textclock()
 local separator_widget = wibox.widget.textbox("<span foreground='" .. theme.icon_color .. "'><b> | </b></span>")
-
-local function make_fa_icon(code)
-    return wibox.widget {
-        font   = theme.icon_font,
-        markup = ' <span color="' .. theme.icon_color .. '">' .. code .. '</span> ',
-        align  = 'center',
-        valign = 'center',
-        widget = wibox.widget.textbox
-    }
-end
-
-local fadriveicon = make_fa_icon('\u{f0a0}');
-local facpuicon = make_fa_icon('\u{f2db}')
-local famemicon = make_fa_icon('\u{f538}')
-local fatimeicon = make_fa_icon('\u{f017}')
 
 awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
@@ -156,25 +144,29 @@ awful.screen.connect_for_each_screen(function(s)
         {
             -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            fadriveicon,
+
+            todo_widget(),
+            separator_widget,
+
+            icons.drive,
             fs_widget(),
             separator_widget,
 
             net_widget(),
             separator_widget,
 
-            facpuicon,
+            icons.cpu,
             cpu_widget(),
             separator_widget,
 
-            famemicon,
+            icons.memory,
             ram_widget(),
             separator_widget,
 
             volume_widget(),
             separator_widget,
 
-            fatimeicon,
+            icons.time,
             clock_widget,
             separator_widget,
 

@@ -6,7 +6,6 @@ export BROWSER=librewolf
 
 export QT_QPA_PLATFORMTHEME=qt5ct
 export _JAVA_AWT_WM_NONREPARENTING=1
-
 export PATH=$PATH~/.cargo/bin
 
 alias die="yay -Syyu --noconfirm ; poweroff"
