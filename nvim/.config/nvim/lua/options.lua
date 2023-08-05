@@ -20,10 +20,10 @@ vim.opt.cursorline = false
 vim.opt.wildmenu = true
 vim.opt.completeopt = 'menu,menuone,noselect,noinsert'
 vim.opt.hidden = true
-vim.opt.mouse = ''
+vim.opt.mouse = 'a'
 vim.opt.swapfile = false
 vim.opt.laststatus = 3
 vim.opt.exrc = true
 vim.opt.termguicolors = true
 vim.opt.background = 'dark'
-vim.cmd.colorscheme('gruvbox-baby')
+vim.cmd.colorscheme('melange')
