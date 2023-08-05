@@ -1,5 +1,5 @@
 export EDITOR=nvim
-export TERMINAL=alacritty
+export TERMINAL=wezterm
 export FILEMAN=thunar
 export FILEMAN_TUI=ranger
 export BROWSER=librewolf
@@ -9,12 +9,11 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 export PATH=$PATH~/.cargo/bin
 
 alias die="yay -Syyu --noconfirm ; poweroff"
-alias rbt="reboot"
+alias rbt="sudo reboot"
 alias py="python"
 
 alias ff="fastfetch"
 alias v="$EDITOR"
-alias hx="helix"
 alias s="sudo"
 alias mi="make install"
 alias ls="ls -l --color"

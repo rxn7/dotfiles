@@ -7,6 +7,9 @@ local awful = require("awful")
 local wibox = require("wibox")
 local beautiful = require("beautiful")
 local naughty = require("naughty")
+local menubar = require("menubar")
+menubar.show_categories = false
+
 require("awful.autofocus")
 
 if awesome.startup_errors then
@@ -43,7 +46,11 @@ awful.layout.layouts = {
     awful.layout.suit.tile,
 }
 
--- Create a wibox for each screen and add it
+function naughty.config.notify_callback(args)
+    -- awful.spawn("play ~/.config/awesome/audio/notification.wav")
+    return args
+end
+
 local taglist_buttons = gears.table.join(
     awful.button({}, 1, function(t) t:view_only() end),
     awful.button({ modkey }, 1, function(t)
@@ -101,7 +108,7 @@ screen.connect_signal("property::geometry", set_wallpaper)
 local icons = require("icons").setup(wibox, theme)
 
 local cpu_widget = require("awesome-wm-widgets.cpu-widget.cpu-widget")
-local volume_widget = require("awesome-wm-widgets.volume-widget.volume")
+local volume_widget = require("awesome-wm-widgets.pactl-widget.volume")
 local ram_widget = require("awesome-wm-widgets.ram-widget.ram-widget")
 local net_widget = require("awesome-wm-widgets.net-speed-widget.net-speed")
 local fs_widget = require("awesome-wm-widgets.fs-widget.fs-widget")
@@ -133,18 +140,16 @@ awful.screen.connect_for_each_screen(function(s)
         position = "top", screen = s
     })
 
-    -- Add widgets to the wibox
     s.wibox:setup {
         layout = wibox.layout.align.horizontal,
         {
             layout = wibox.layout.fixed.horizontal,
             s.taglist,
         },
-        s.tasklist, -- Middle widget
+        s.tasklist,
+        s.index == screen.primary.index and
         {
-            -- Right widgets
-            layout = wibox.layout.fixed.horizontal,
-
+            layout = wibox.layout.fixed.horizontal(),
             todo_widget(),
             separator_widget,
 
@@ -163,7 +168,11 @@ awful.screen.connect_for_each_screen(function(s)
             ram_widget(),
             separator_widget,
 
-            volume_widget(),
+            icons.volume,
+            volume_widget {
+                widget_type = 'horizontal_bar',
+                tooltip = true
+            },
             separator_widget,
 
             icons.time,
@@ -171,7 +180,7 @@ awful.screen.connect_for_each_screen(function(s)
             separator_widget,
 
             wibox.widget.systray(),
-        },
+        }
     }
 end)
 -- }}}
@@ -184,7 +193,7 @@ local globalkeys = gears.table.join(
     awful.key({ modkey }, "j", function() awful.client.focus.byidx(1) end),
     awful.key({ modkey }, "k", function() awful.client.focus.byidx(-1) end),
     awful.key({ modkey }, "Return", function() awful.spawn(terminal) end),
-    awful.key({ modkey }, "p", function() awful.spawn('rofi -show drun') end),
+    awful.key({ modkey }, "p", function() menubar.refresh() menubar.show() end),
     awful.key({ modkey }, "e", function() awful.spawn(os.getenv('FILEMAN')) end),
     awful.key({ modkey, }, "w", function() awful.spawn(os.getenv("BROWSER")) end),
     awful.key({ modkey, "Shift" }, "j", function() awful.client.swap.byidx(1) end),
@@ -310,8 +319,11 @@ local clientkeys = gears.table.join(
     end, { description = "(un)maximize horizontally", group = "client" })
 )
 
+
+client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
+client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
+
 awful.rules.rules = {
-    -- All clients will match this rule.
     {
         rule = {},
         callback = function(c)
@@ -331,47 +343,4 @@ awful.rules.rules = {
             titlebars_enabled = false
         }
     },
-
-    -- Floating clients.
-    {
-        rule_any = {
-            instance = {},
-            class = {
-                "Arandr",
-                "Gpick",
-                "Sxiv",
-            },
-            name = {
-            },
-            role = {
-                "pop-up", -- e.g. Google Chrome's (detached) Developer Tools.
-            }
-        },
-        properties = { floating = true }
-    },
 }
-
-local function update_client_shape(c)
-    if not c.fullscreen then
-        c.shape = function(cr, w, h) gears.shape.rounded_rect(cr, w, h, 10) end
-    else
-        c.shape = function(cr, w, h) gears.shape.rectangle(cr, w, h) end
-    end
-end
-
-client.connect_signal("manage", function(c)
-    if awesome.startup
-        and not c.size_hints.user_position
-        and not c.size_hints.program_position then
-        awful.placement.no_offscreen(c)
-    end
-
-    update_client_shape(c)
-end)
-
-client.connect_signal("property::fullscreen", function(c)
-    update_client_shape(c)
-end)
-
-client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
-client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)

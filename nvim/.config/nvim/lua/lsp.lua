@@ -34,6 +34,7 @@ require('mason').setup()
 
 local mason_lspc = require('mason-lspconfig')
 mason_lspc.setup({
+	log_level = vim.log.levels.OFF,
 	ensure_installed = {
 		"lua_ls",
 		"clangd",

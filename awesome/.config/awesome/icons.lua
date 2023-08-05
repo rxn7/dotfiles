@@ -11,11 +11,11 @@ return {
         end
 
         return {
-            linux = make_fa_icon('\u{f0a0}'),
             drive = make_fa_icon('\u{f0a0}'),
             cpu = make_fa_icon('\u{f2db}'),
             memory = make_fa_icon('\u{f538}'),
             time = make_fa_icon('\u{f017}'),
+            volume = make_fa_icon('\u{f028}')
         }
     end
 }

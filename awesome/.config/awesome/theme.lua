@@ -6,7 +6,7 @@ theme.wallpaper     = "~/.wallpapers/gradient.png"
 -- }}}
 
 -- {{{ Styles
-theme.font          = "Monoid Nerd Font Mono 10"
+theme.font          = "Monaco Nerd Font 10"
 
 -- {{{ Icons
 theme.icon_font     = "Font Awesome 6 Free Solid 12"
