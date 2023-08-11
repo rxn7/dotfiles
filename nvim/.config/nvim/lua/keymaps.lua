@@ -5,7 +5,7 @@ end
 vim.g.mapleader = ' '
 
 keymap('n', 'Y', 'y$')
-keymap('n', '<leader>s', ':w<cr>')
+keymap('n', '<C-s>', ':w<cr>')
 
 keymap('n', '<leader>e', ':NvimTreeToggle<cr>')
 

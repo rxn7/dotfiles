@@ -1,27 +1,22 @@
 export EDITOR=nvim
 export TERMINAL=wezterm
 export FILEMAN=thunar
-export FILEMAN_TUI=ranger
+export FILEMAN_TUI=vifm
 export BROWSER=librewolf
-
-export QT_QPA_PLATFORMTHEME=qt5ct
-export _JAVA_AWT_WM_NONREPARENTING=1
 export PATH=$PATH~/.cargo/bin
 
-alias die="yay -Syyu --noconfirm ; poweroff"
+alias die="sudo paru -Syyu --noconfirm ; sudo poweroff"
 alias rbt="sudo reboot"
-alias py="python"
-
 alias ff="fastfetch"
-alias v="$EDITOR"
 alias s="sudo"
-alias mi="make install"
+alias v="$EDITOR"
+alias fm="$FILEMAN_TUI"
 alias ls="ls -l --color"
 alias ll="ls -lA --color"
 alias mf="touch"
 alias md="mkdir"
-alias fm="$FILEMAN_TUI"
-
+alias py="python"
+alias mi="make install"
 alias g="git"
 alias gs="git status"
 alias gcm="git commit -a -m"
@@ -31,3 +26,6 @@ alias gp="git push"
 alias gi="git init"
 alias gc="git clone"
 alias gd="git diff"
+
+export QT_QPA_PLATFORMTHEME=qt5ct
+export _JAVA_AWT_WM_NONREPARENTING=1

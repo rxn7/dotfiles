@@ -1,3 +1,6 @@
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 require('nvim-tree').setup({
 	sort_by = 'case_sensitive',
 	view = {
@@ -10,6 +13,6 @@ require('nvim-tree').setup({
 		highlight_modified = "icon",
 	},
 	filters = {
-		dotfiles = true,
+		dotfiles = false,
 	}
 })
