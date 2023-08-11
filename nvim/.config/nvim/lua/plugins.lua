@@ -1,9 +1,5 @@
 local status, packer = pcall(require, "packer")
-
-if not status then
-	print("Packer is not installed")
-	return
-end
+if not status then return end
 
 packer.startup(function(use)
 	-- Essential
@@ -11,6 +7,7 @@ packer.startup(function(use)
 		'wbthomason/packer.nvim',
 		run = ":PackerSync"
 	}
+	use 'numToStr/Comment.nvim'
 	use 'nvim-lua/plenary.nvim'
 	use 'sheerun/vim-polyglot'
 	use 'tweekmonster/startuptime.vim'
