@@ -43,8 +43,8 @@ mason_lspc.setup({
 		"cssls",
 		"omnisharp",
 		"cmake",
-		"eslint",
-		"tailwindcss",
+		-- "eslint",
+		-- "tailwindcss",
 		"rust_analyzer"
 	},
 	automatic_installation = true,

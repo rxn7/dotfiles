@@ -1,4 +1,4 @@
-theme = "zenburn" 
+theme = "gruvbox" 
 
 [editor]
 line-number = "relative"
