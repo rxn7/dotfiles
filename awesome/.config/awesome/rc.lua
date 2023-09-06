@@ -130,9 +130,54 @@ awful.screen.connect_for_each_screen(function(s)
 
     -- Create a tasklist widget
     s.tasklist = awful.widget.tasklist {
-        screen  = s,
-        filter  = awful.widget.tasklist.filter.currenttags,
-        buttons = tasklist_buttons
+        screen   = s,
+        filter   = awful.widget.tasklist.filter.currenttags,
+        buttons  = tasklist_buttons,
+        style    = {
+            shape_border_width = 1,
+            shape_border_color = '#777777',
+            shape  = gears.shape.rounded_bar,
+        },
+        layout   = {
+            spacing = 10,
+            spacing_widget = {
+                {
+                    forced_width = 5,
+                    shape        = nil,
+                    widget       = wibox.container.place,
+                },
+                valign = 'center',
+                halign = 'center',
+                widget = wibox.container.place,
+            },
+            layout  = wibox.layout.flex.horizontal
+        },
+        -- Notice that there is *NO* wibox.wibox prefix, it is a template,
+        -- not a widget instance.
+        widget_template = {
+            {
+                {
+                    {
+                        {
+                            id     = 'icon_role',
+                            widget = wibox.widget.imagebox,
+                        },
+                        margins = 2,
+                        widget  = wibox.container.margin,
+                    },
+                    {
+                        id     = 'text_role',
+                        widget = wibox.widget.textbox,
+                    },
+                    layout = wibox.layout.fixed.horizontal,
+                },
+                left  = 10,
+                right = 10,
+                widget = wibox.container.margin
+            },
+            id     = 'background_role',
+            widget = wibox.container.background,
+        },
     }
 
     -- Create the wibox
@@ -141,13 +186,17 @@ awful.screen.connect_for_each_screen(function(s)
     })
 
     s.wibox:setup {
-        layout = wibox.layout.align.horizontal,
+        layout = wibox.layout.flex.horizontal(),
         {
-            layout = wibox.layout.fixed.horizontal,
+            layout = wibox.layout.fixed.horizontal(),
             s.taglist,
+            s.tasklist,
         },
-        s.tasklist,
-        s.index == screen.primary.index and
+        {
+            layout = wibox.layout.fixed.horizontal(),
+            icons.time,
+            clock_widget,
+        },
         {
             layout = wibox.layout.fixed.horizontal(),
             todo_widget(),
@@ -173,10 +222,6 @@ awful.screen.connect_for_each_screen(function(s)
                 widget_type = 'horizontal_bar',
                 tooltip = true
             },
-            separator_widget,
-
-            icons.time,
-            clock_widget,
             separator_widget,
 
             wibox.widget.systray(),

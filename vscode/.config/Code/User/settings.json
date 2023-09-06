@@ -1,0 +1,94 @@
+{
+    "telemetry.telemetryLevel": "off",
+    "security.workspace.trust.enabled": false,
+    "update.mode": "none",
+
+    "window.titleSeparator": " | ",
+    "window.menuBarVisibility": "hidden",
+    "window.title": "${dirty}${activeEditorShort}${separator}${rootName}",
+    "workbench.iconTheme": "helium-icon-theme",
+    "workbench.welcomePage.walkthroughs.openOnInstall": false,
+    "workbench.activityBar.visible": false,
+    "workbench.statusBar.visible": false,
+    "workbench.sideBar.location": "right",
+    "workbench.editor.showTabs": true,
+    "workbench.startupEditor": "none",
+    "workbench.enableExperiments": false,
+
+    "breadcrumbs.enabled": false,
+
+    "editor.accessibilitySupport": "off",
+    "editor.copyWithSyntaxHighlighting": false,
+    "editor.renderLineHighlight": "gutter",
+    "editor.detectIndentation": false,
+    "editor.tabSize": 4,
+    "editor.useTabStops": true,
+    "editor.renderControlCharacters": false,
+    "editor.renderFinalNewline": "off",
+    "editor.renderWhitespace": "none",
+    "editor.minimap.enabled": false,
+    "editor.glyphMargin": false,
+    "editor.codeLens": true,
+    "editor.guides.bracketPairs": false,
+    "editor.guides.indentation": false,
+    "editor.guides.bracketPairsHorizontal": false,
+    "editor.guides.highlightActiveBracketPair": false,
+    "editor.guides.highlightActiveIndentation": false,
+    "editor.scrollbar.horizontal": "hidden",
+    "editor.scrollbar.vertical": "hidden",
+    "editor.scrollbar.horizontalScrollbarSize": 0,
+    "editor.scrollbar.verticalScrollbarSize": 0,
+    "editor.fontFamily": "Monaco Nerd Font",
+    "editor.fontSize": 21,
+    "editor.inlayHints.enabled": "on",
+
+    "extensions.ignoreRecommendations": true,
+
+    // vim
+    "vim.leader": "<Space>",
+    "vim.smartRelativeLine": true,
+    "vim.cursorStylePerMode.insert": "block-outline",
+
+    "vim.normalModeKeyBindingsNonRecursive": [
+        { "before": ["<S-h>"], "commands": [":bprevious"] },
+        { "before": ["<S-l>"], "commands": [":bnext"] },
+
+        { "before": ["leader", "e"], "commands": ["workbench.explorer.fileView.focus"] },
+        { "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] },
+        { "before": ["leader", "p"], "commands": ["editor.action.formatDocument"] },
+
+        { "before": ["leader", "s"], "commands": [":sp"] },
+        { "before": ["leader", "v"], "commands": [":vs"] },
+
+        { "before": ["leader", "h"], "commands": ["workbench.action.focusLeftGroup"] },
+        { "before": ["leader", "j"], "commands": ["workbench.action.focusBelowGroup"] },
+        { "before": ["leader", "k"], "commands": ["workbench.action.focusAboveGroup"] },
+        { "before": ["leader", "l"], "commands": ["workbench.action.focusRightGroup"] },
+    ],
+
+    "vim.visualModeKeyBindings": [
+        { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+        { "before": [">"], "commands": ["editor.action.indentLines"] },
+        
+        { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
+        { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
+    ],
+
+    "files.exclude": {
+        "**/.git": false,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true
+    },
+
+    "explorer.confirmDelete": false,
+    "explorer.excludeGitIgnore": true,
+
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "typescript.surveys.enabled": false,
+    "window.zoomLevel": -2,
+}
