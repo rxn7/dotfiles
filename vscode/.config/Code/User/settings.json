@@ -1,94 +1,142 @@
 {
-    "telemetry.telemetryLevel": "off",
-    "security.workspace.trust.enabled": false,
-    "update.mode": "none",
+  "telemetry.telemetryLevel": "off",
+  "security.workspace.trust.enabled": false,
+  "update.mode": "none",
 
-    "window.titleSeparator": " | ",
-    "window.menuBarVisibility": "hidden",
-    "window.title": "${dirty}${activeEditorShort}${separator}${rootName}",
-    "workbench.iconTheme": "helium-icon-theme",
-    "workbench.welcomePage.walkthroughs.openOnInstall": false,
-    "workbench.activityBar.visible": false,
-    "workbench.statusBar.visible": false,
-    "workbench.sideBar.location": "right",
-    "workbench.editor.showTabs": true,
-    "workbench.startupEditor": "none",
-    "workbench.enableExperiments": false,
+  "window.titleSeparator": " | ",
+  "window.menuBarVisibility": "hidden",
+  "window.title": "${dirty}${activeEditorShort}${separator}${rootName}",
+  "workbench.welcomePage.walkthroughs.openOnInstall": false,
+  "workbench.statusBar.visible": true,
+  "workbench.sideBar.location": "right",
+  "workbench.editor.showTabs": "multiple",
+  "workbench.startupEditor": "none",
+  "workbench.enableExperiments": false,
 
-    "breadcrumbs.enabled": false,
+  "editor.formatOnSave": true,
+  "editor.accessibilitySupport": "off",
+  "editor.copyWithSyntaxHighlighting": false,
+  "editor.renderLineHighlight": "gutter",
+  "editor.detectIndentation": false,
+  "editor.tabSize": 4,
+  "editor.useTabStops": true,
+  "editor.renderControlCharacters": false,
+  "editor.renderFinalNewline": "off",
+  "editor.renderWhitespace": "none",
+  "editor.minimap.enabled": false,
+  "editor.glyphMargin": false,
+  "editor.codeLens": true,
+  "editor.guides.bracketPairs": false,
+  "editor.guides.indentation": false,
+  "editor.guides.bracketPairsHorizontal": false,
+  "editor.guides.highlightActiveBracketPair": false,
+  "editor.guides.highlightActiveIndentation": false,
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.vertical": "hidden",
+  "editor.scrollbar.horizontalScrollbarSize": 0,
+  "editor.scrollbar.verticalScrollbarSize": 0,
+  "editor.fontFamily": "Envy Code R",
+  "terminal.integrated.fontFamily": "Envy Code R",
+  "terminal.integrated.gpuAcceleration": "on",
+  "terminal.integrated.fontSize": 18,
+  "editor.fontSize": 18,
+  "editor.inlayHints.enabled": "on",
 
-    "editor.accessibilitySupport": "off",
-    "editor.copyWithSyntaxHighlighting": false,
-    "editor.renderLineHighlight": "gutter",
-    "editor.detectIndentation": false,
-    "editor.tabSize": 4,
-    "editor.useTabStops": true,
-    "editor.renderControlCharacters": false,
-    "editor.renderFinalNewline": "off",
-    "editor.renderWhitespace": "none",
-    "editor.minimap.enabled": false,
-    "editor.glyphMargin": false,
-    "editor.codeLens": true,
-    "editor.guides.bracketPairs": false,
-    "editor.guides.indentation": false,
-    "editor.guides.bracketPairsHorizontal": false,
-    "editor.guides.highlightActiveBracketPair": false,
-    "editor.guides.highlightActiveIndentation": false,
-    "editor.scrollbar.horizontal": "hidden",
-    "editor.scrollbar.vertical": "hidden",
-    "editor.scrollbar.horizontalScrollbarSize": 0,
-    "editor.scrollbar.verticalScrollbarSize": 0,
-    "editor.fontFamily": "Monaco Nerd Font",
-    "editor.fontSize": 21,
-    "editor.inlayHints.enabled": "on",
+  "extensions.ignoreRecommendations": true,
 
-    "extensions.ignoreRecommendations": true,
+  // vim
+  "vim.leader": "<Space>",
+  "vim.smartRelativeLine": true,
+  "vim.cursorStylePerMode.insert": "block-outline",
 
-    // vim
-    "vim.leader": "<Space>",
-    "vim.smartRelativeLine": true,
-    "vim.cursorStylePerMode.insert": "block-outline",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    { "before": ["<S-h>"], "commands": [":bprevious"] },
+    { "before": ["<S-l>"], "commands": [":bnext"] },
 
-    "vim.normalModeKeyBindingsNonRecursive": [
-        { "before": ["<S-h>"], "commands": [":bprevious"] },
-        { "before": ["<S-l>"], "commands": [":bnext"] },
-
-        { "before": ["leader", "e"], "commands": ["workbench.explorer.fileView.focus"] },
-        { "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] },
-        { "before": ["leader", "p"], "commands": ["editor.action.formatDocument"] },
-
-        { "before": ["leader", "s"], "commands": [":sp"] },
-        { "before": ["leader", "v"], "commands": [":vs"] },
-
-        { "before": ["leader", "h"], "commands": ["workbench.action.focusLeftGroup"] },
-        { "before": ["leader", "j"], "commands": ["workbench.action.focusBelowGroup"] },
-        { "before": ["leader", "k"], "commands": ["workbench.action.focusAboveGroup"] },
-        { "before": ["leader", "l"], "commands": ["workbench.action.focusRightGroup"] },
-    ],
-
-    "vim.visualModeKeyBindings": [
-        { "before": ["<"], "commands": ["editor.action.outdentLines"] },
-        { "before": [">"], "commands": ["editor.action.indentLines"] },
-        
-        { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
-        { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
-    ],
-
-    "files.exclude": {
-        "**/.git": false,
-        "**/.svn": true,
-        "**/.hg": true,
-        "**/CVS": true,
-        "**/.DS_Store": true,
-        "**/Thumbs.db": true
+    {
+      "before": ["leader", "e"],
+      "commands": ["workbench.explorer.fileView.focus"]
     },
+    { "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] },
+    { "before": ["leader", "p"], "commands": ["editor.action.formatDocument"] },
 
-    "explorer.confirmDelete": false,
-    "explorer.excludeGitIgnore": true,
+    { "before": ["leader", "s"], "commands": [":sp"] },
+    { "before": ["leader", "v"], "commands": [":vs"] },
 
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    {
+      "before": ["leader", "h"],
+      "commands": ["workbench.action.focusLeftGroup"]
     },
-    "typescript.surveys.enabled": false,
-    "window.zoomLevel": -2,
+    {
+      "before": ["leader", "j"],
+      "commands": ["workbench.action.focusBelowGroup"]
+    },
+    {
+      "before": ["leader", "k"],
+      "commands": ["workbench.action.focusAboveGroup"]
+    },
+    {
+      "before": ["leader", "l"],
+      "commands": ["workbench.action.focusRightGroup"]
+    }
+  ],
+
+  "vim.visualModeKeyBindings": [
+    { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+    { "before": [">"], "commands": ["editor.action.indentLines"] },
+
+    { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
+    { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] }
+  ],
+
+  "files.exclude": {
+    "**/.git": false,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true
+  },
+
+  "explorer.confirmDelete": false,
+  "explorer.excludeGitIgnore": true,
+
+  "[csharp]": {
+    "editor.formatOnSave": false,
+    "editor.maxTokenizationLineLength": 2500,
+    "editor.inlineSuggest.suppressSuggestions": false
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "typescript.surveys.enabled": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "csharp.format.enable": false,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "arduino.useArduinoCli": true,
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools",
+    "editor.formatOnSave": false
+  },
+  "workbench.colorTheme": "In The Fog Dark",
+  "workbench.activityBar.location": "hidden",
+  "workbench.iconTheme": "catppuccin-mocha"
 }

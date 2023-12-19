@@ -46,11 +46,6 @@ awful.layout.layouts = {
     awful.layout.suit.tile,
 }
 
-function naughty.config.notify_callback(args)
-    -- awful.spawn("play ~/.config/awesome/audio/notification.wav")
-    return args
-end
-
 local taglist_buttons = gears.table.join(
     awful.button({}, 1, function(t) t:view_only() end),
     awful.button({ modkey }, 1, function(t)
@@ -231,16 +226,9 @@ end)
 -- }}}
 
 local globalkeys = gears.table.join(
-    awful.key({ modkey }, "s", function() awful.spawn("screengrab") end),
-    awful.key({ modkey }, "]", function() volume_widget:inc(5) end),
-    awful.key({ modkey }, "[", function() volume_widget:dec(5) end),
-    awful.key({ modkey }, "\\", function() volume_widget:toggle() end),
     awful.key({ modkey }, "j", function() awful.client.focus.byidx(1) end),
     awful.key({ modkey }, "k", function() awful.client.focus.byidx(-1) end),
-    awful.key({ modkey }, "Return", function() awful.spawn(terminal) end),
     awful.key({ modkey }, "p", function() menubar.refresh() menubar.show() end),
-    awful.key({ modkey }, "e", function() awful.spawn(os.getenv('FILEMAN')) end),
-    awful.key({ modkey, }, "w", function() awful.spawn(os.getenv("BROWSER")) end),
     awful.key({ modkey, "Shift" }, "j", function() awful.client.swap.byidx(1) end),
     awful.key({ modkey, "Shift" }, "k", function() awful.client.swap.byidx(-1) end),
     awful.key({ modkey, "Control" }, "j", function() awful.screen.focus_relative(1) end),

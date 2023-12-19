@@ -23,5 +23,5 @@ vim.opt.exrc = true
 
 vim.opt.termguicolors = true
 vim.opt.background = 'dark'
-vim.cmd.colorscheme('gruvbox-baby')
+vim.cmd.colorscheme('catppuccin-mocha')
 vim.cmd[[hi Normal ctermbg=none guibg=none]]

@@ -16,10 +16,10 @@ keymap('n', '<leader>fd', ':Telescope diagnostics<cr>')
 keymap('n', '<leader>fb', ':Telescope buffers<cr>')
 
 -- Move selection
-keymap('x', '<M-j>', 'xp`[V`]')
-keymap('x', '<M-h>', '<gv')
-keymap('x', '<M-l>', '>gv')
-keymap('x', '<M-k>', 'xkP`[V`]')
+keymap('x', '<S-j>', 'xp`[V`]')
+keymap('x', '<S-h>', '<gv')
+keymap('x', '<S-l>', '>gv')
+keymap('x', '<S-k>', 'xkP`[V`]')
 
 -- LSP
 keymap('n', 'gr', ':lua vim.lsp.buf.references()<cr>')

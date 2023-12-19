@@ -16,7 +16,7 @@ packer.startup(function(use)
 
 	-- Looks
 	use 'kyazdani42/nvim-web-devicons'
-	use 'luisiacc/gruvbox-baby'
+	use 'catppuccin/nvim'
 	use 'savq/melange-nvim'
 	use 'nvim-lualine/lualine.nvim'
 
