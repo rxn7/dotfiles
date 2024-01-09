@@ -45,7 +45,8 @@ mason_lspc.setup({
 		"cmake",
 		-- "eslint",
 		-- "tailwindcss",
-		"rust_analyzer"
+		"rust_analyzer",
+		"arduino_language_server"
 	},
 	automatic_installation = true,
 })

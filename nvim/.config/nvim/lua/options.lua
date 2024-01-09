@@ -23,5 +23,5 @@ vim.opt.exrc = true
 
 vim.opt.termguicolors = true
 vim.opt.background = 'dark'
-vim.cmd.colorscheme('catppuccin-mocha')
+vim.cmd.colorscheme('zenburned')
 vim.cmd[[hi Normal ctermbg=none guibg=none]]

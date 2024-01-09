@@ -1,5 +1,5 @@
 export EDITOR=nvim
-export TERMINAL=wezterm
+export TERMINAL=alacritty
 export FILEMAN=thunar
 export FILEMAN_TUI=vifm
 export BROWSER=librewolf

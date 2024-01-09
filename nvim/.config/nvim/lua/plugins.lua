@@ -1,11 +1,11 @@
-local status, packer = pcall(require, "packer")
+local status, packer = pcall(require, 'packer')
 if not status then return end
 
 packer.startup(function(use)
 	-- Essential
 	use {
 		'wbthomason/packer.nvim',
-		run = ":PackerSync"
+		run = ':PackerSync'
 	}
 	use 'numToStr/Comment.nvim'
 	use 'nvim-lua/plenary.nvim'
@@ -16,21 +16,19 @@ packer.startup(function(use)
 
 	-- Looks
 	use 'kyazdani42/nvim-web-devicons'
-	use 'catppuccin/nvim'
-	use 'savq/melange-nvim'
 	use 'nvim-lualine/lualine.nvim'
+	use {
+		'mcchrish/zenbones.nvim',
+		requires = 'rktjmp/lush.nvim'
+	}
 
 	-- Telescope
-	use {
-		'nvim-telescope/telescope.nvim',
-		requires = {
-		}
-	}
+	use 'nvim-telescope/telescope.nvim'
 
 	-- Treesitter
 	use {
 		'nvim-treesitter/nvim-treesitter',
-		run = ":TSUpdate",
+		run = ':TSUpdate',
 	}
 
 	-- Cmp
@@ -46,7 +44,7 @@ packer.startup(function(use)
 	use 'neovim/nvim-lspconfig'
 	use {
 		'williamboman/mason.nvim',
-		"williamboman/mason-lspconfig.nvim",
+		'williamboman/mason-lspconfig.nvim',
 		run = ':MasonUpdate',
 	}
 
@@ -54,7 +52,7 @@ packer.startup(function(use)
 	use 'mattn/emmet-vim'
 	use {
 		'akinsho/git-conflict.nvim',
-		tag = "*",
+		tag = '*',
 		config = function()
 			require('git-conflict').setup({})
 		end

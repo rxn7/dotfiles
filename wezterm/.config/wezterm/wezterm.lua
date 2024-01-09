@@ -9,6 +9,7 @@ config.window_frame = {
   inactive_titlebar_bg = "#262626"
 }
 config.adjust_window_size_when_changing_font_size = false
+config.font = wezterm.font('IosevkaTerm Nerd Font')
 
 config.color_schemes = {
     ["gruvbox_material_dark_hard"] = {

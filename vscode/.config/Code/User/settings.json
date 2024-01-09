@@ -138,5 +138,6 @@
   },
   "workbench.colorTheme": "In The Fog Dark",
   "workbench.activityBar.location": "hidden",
-  "workbench.iconTheme": "catppuccin-mocha"
+  "workbench.iconTheme": "catppuccin-mocha",
+  "window.zoomLevel": -3
 }

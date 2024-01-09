@@ -4,6 +4,9 @@
   <property name="log-max-size-enabled" type="bool" value="true"/>
   <property name="applications" type="empty">
     <property name="known_applications" type="array">
+      <value type="string" value="launcher"/>
+      <value type="string" value="signalbeta"/>
+      <value type="string" value="Spotify"/>
       <value type="string" value="wezterm"/>
       <value type="string" value="Xfce4-notifyd settings"/>
       <value type="string" value="xfce4-settings-helper"/>

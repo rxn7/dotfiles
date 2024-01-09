@@ -7,6 +7,7 @@ local awful = require("awful")
 local wibox = require("wibox")
 local beautiful = require("beautiful")
 local naughty = require("naughty")
+package.loaded["naughty.dbus"] = {}
 local menubar = require("menubar")
 menubar.show_categories = false
 
