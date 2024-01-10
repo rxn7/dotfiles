@@ -7,8 +7,8 @@ packer.startup(function(use)
 		'wbthomason/packer.nvim',
 		run = ':PackerSync'
 	}
-	use 'numToStr/Comment.nvim'
 	use 'nvim-lua/plenary.nvim'
+	use 'numToStr/Comment.nvim'
 	use 'sheerun/vim-polyglot'
 	use 'tweekmonster/startuptime.vim'
 	use 'nvim-tree/nvim-tree.lua'
@@ -36,8 +36,6 @@ packer.startup(function(use)
 	use 'hrsh7th/nvim-cmp'
 	use 'hrsh7th/cmp-path'
 	use 'hrsh7th/cmp-buffer'
-
-	-- Snippets
 	use 'hrsh7th/vim-vsnip'
 
 	-- LSP

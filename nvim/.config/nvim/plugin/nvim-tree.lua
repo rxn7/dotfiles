@@ -8,14 +8,19 @@ nvim_tree.setup({
 	sort_by = 'case_sensitive',
 	view = {
 		side = 'right',
-		width = 30,
+		width = 60,
 	},
 	renderer = {
-		group_empty = true,
+		group_empty = false,
 		highlight_opened_files = "icon",
 		highlight_modified = "icon",
 	},
 	filters = {
 		dotfiles = false,
+	},
+	actions = {
+		open_file = {
+			quit_on_open = true
+		}
 	}
 })
