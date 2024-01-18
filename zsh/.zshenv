@@ -1,3 +1,5 @@
+export CC=clang
+export CXX=clang++
 export EDITOR=nvim
 export TERMINAL=alacritty
 export FILEMAN=thunar

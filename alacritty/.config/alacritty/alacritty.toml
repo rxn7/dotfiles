@@ -1,13 +1,9 @@
 [font]
-size = 14
+size = 15
 
 [font.normal]
-family = "VictorMono Nerd Font"
+family = "CozetteVector"
 style = "Regular"
-
-[font.italic]
-family = "VictorMono Nerd Font"
-style = "Bold"
 
 [[colors.indexed_colors]]
 color = "0xdfaf8f"

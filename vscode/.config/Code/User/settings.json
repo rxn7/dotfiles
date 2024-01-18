@@ -136,8 +136,8 @@
     "editor.defaultFormatter": "ms-vscode.cpptools",
     "editor.formatOnSave": false
   },
-  "workbench.colorTheme": "In The Fog Dark",
+  "workbench.colorTheme": "Zenburn",
   "workbench.activityBar.location": "hidden",
   "workbench.iconTheme": "catppuccin-mocha",
-  "window.zoomLevel": -3
+  "window.zoomLevel": -1
 }
