@@ -2,7 +2,7 @@
 size = 15
 
 [font.normal]
-family = "CozetteVector"
+family = "FantasqueSansM Nerd Font Mono"
 style = "Regular"
 
 [[colors.indexed_colors]]

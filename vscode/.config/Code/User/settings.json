@@ -1,6 +1,5 @@
 {
-  "telemetry.telemetryLevel": "off",
-  "security.workspace.trust.enabled": false,
+    "security.workspace.trust.enabled": false,
   "update.mode": "none",
 
   "window.titleSeparator": " | ",
@@ -35,8 +34,8 @@
   "editor.scrollbar.vertical": "hidden",
   "editor.scrollbar.horizontalScrollbarSize": 0,
   "editor.scrollbar.verticalScrollbarSize": 0,
-  "editor.fontFamily": "Envy Code R",
-  "terminal.integrated.fontFamily": "Envy Code R",
+  "editor.fontFamily": "FantasqueSansM Nerd Font Mono",
+  "terminal.integrated.fontFamily": "FantasqueSansM Nerd Font Mono",
   "terminal.integrated.gpuAcceleration": "on",
   "terminal.integrated.fontSize": 18,
   "editor.fontSize": 18,
@@ -135,9 +134,10 @@
   "[cpp]": {
     "editor.defaultFormatter": "ms-vscode.cpptools",
     "editor.formatOnSave": false
-  },
-  "workbench.colorTheme": "Zenburn",
+},
   "workbench.activityBar.location": "hidden",
-  "workbench.iconTheme": "catppuccin-mocha",
-  "window.zoomLevel": -1
+"workbench.iconTheme": "catppuccin-mocha",
+"godot_tools.editor_path": "/usr/bin/godot",
+"workbench.colorTheme": "Atom One Light",
+"window.zoomLevel": -1
 }
