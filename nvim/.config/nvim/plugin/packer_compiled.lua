@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/rxn/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/rxn/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/rxn/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/rxn/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/rxn/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/home/rxn/.cache/nvim/packer_hererocks/2.1.1702233742/share/lua/5.1/?.lua;/home/rxn/.cache/nvim/packer_hererocks/2.1.1702233742/share/lua/5.1/?/init.lua;/home/rxn/.cache/nvim/packer_hererocks/2.1.1702233742/lib/luarocks/rocks-5.1/?.lua;/home/rxn/.cache/nvim/packer_hererocks/2.1.1702233742/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/rxn/.cache/nvim/packer_hererocks/2.1.1702233742/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -94,6 +94,11 @@ _G.packer_plugins = {
     path = "/home/rxn/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
+  ["codeium.vim"] = {
+    loaded = true,
+    path = "/home/rxn/.local/share/nvim/site/pack/packer/start/codeium.vim",
+    url = "https://github.com/Exafunction/codeium.vim"
+  },
   ["emmet-vim"] = {
     loaded = true,
     path = "/home/rxn/.local/share/nvim/site/pack/packer/start/emmet-vim",
@@ -105,10 +110,10 @@ _G.packer_plugins = {
     path = "/home/rxn/.local/share/nvim/site/pack/packer/start/git-conflict.nvim",
     url = "https://github.com/akinsho/git-conflict.nvim"
   },
-  ["gruvbox-baby"] = {
+  ["godot.nvim"] = {
     loaded = true,
-    path = "/home/rxn/.local/share/nvim/site/pack/packer/start/gruvbox-baby",
-    url = "https://github.com/luisiacc/gruvbox-baby"
+    path = "/home/rxn/.local/share/nvim/site/pack/packer/start/godot.nvim",
+    url = "https://github.com/lommix/godot.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -124,11 +129,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/rxn/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
-  },
-  ["melange-nvim"] = {
-    loaded = true,
-    path = "/home/rxn/.local/share/nvim/site/pack/packer/start/melange-nvim",
-    url = "https://github.com/savq/melange-nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -179,6 +179,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/rxn/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
+  },
+  ["vim-handmade-hero"] = {
+    loaded = true,
+    path = "/home/rxn/.local/share/nvim/site/pack/packer/start/vim-handmade-hero",
+    url = "https://github.com/CreaturePhil/vim-handmade-hero"
   },
   ["vim-polyglot"] = {
     loaded = true,

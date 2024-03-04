@@ -12,7 +12,7 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.showmode = true
 vim.opt.breakindent = true
-vim.opt.cursorline = true
+vim.opt.cursorline = false
 vim.opt.wildmenu = true
 vim.opt.completeopt = 'menu,menuone,noselect,noinsert,preview'
 vim.opt.hidden = true
@@ -23,5 +23,4 @@ vim.opt.exrc = true
 
 vim.opt.termguicolors = true
 vim.opt.background = 'dark'
-vim.cmd.colorscheme('zenburned')
-vim.cmd[[hi Normal ctermbg=none guibg=none]]
+vim.cmd.colorscheme('handmade-hero-theme')

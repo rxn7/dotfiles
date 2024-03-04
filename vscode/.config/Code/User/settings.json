@@ -1,5 +1,5 @@
 {
-    "security.workspace.trust.enabled": false,
+  "security.workspace.trust.enabled": false,
   "update.mode": "none",
 
   "window.titleSeparator": " | ",
@@ -134,10 +134,10 @@
   "[cpp]": {
     "editor.defaultFormatter": "ms-vscode.cpptools",
     "editor.formatOnSave": false
-},
+  },
   "workbench.activityBar.location": "hidden",
-"workbench.iconTheme": "catppuccin-mocha",
-"godot_tools.editor_path": "/usr/bin/godot",
-"workbench.colorTheme": "Atom One Light",
-"window.zoomLevel": -1
+  "workbench.iconTheme": "catppuccin-mocha",
+  "godot_tools.editor_path": "/usr/bin/godot",
+  "workbench.colorTheme": "poimandres-storm",
+  "window.zoomLevel": -1
 }

@@ -17,10 +17,7 @@ packer.startup(function(use)
 	-- Looks
 	use 'kyazdani42/nvim-web-devicons'
 	use 'nvim-lualine/lualine.nvim'
-	use {
-		'mcchrish/zenbones.nvim',
-		requires = 'rktjmp/lush.nvim'
-	}
+	use 'luisiacc/handmade-hero-theme'
 
 	-- Telescope
 	use 'nvim-telescope/telescope.nvim'
@@ -39,6 +36,7 @@ packer.startup(function(use)
 	use 'hrsh7th/vim-vsnip'
 
 	-- LSP
+	use 'lommix/godot.nvim'
 	use 'neovim/nvim-lspconfig'
 	use {
 		'williamboman/mason.nvim',
@@ -47,6 +45,7 @@ packer.startup(function(use)
 	}
 
 	-- Other
+	use 'Exafunction/codeium.vim'
 	use 'mattn/emmet-vim'
 	use {
 		'akinsho/git-conflict.nvim',
