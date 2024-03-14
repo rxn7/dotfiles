@@ -7,9 +7,9 @@ vim.g.mapleader = ' '
 keymap('n', 'Y', 'y$')
 keymap('n', '<C-s>', ':w<cr>')
 
-keymap('n', '<leader>e', ':NvimTreeToggle<cr>')
 
 -- Telescope
+keymap('n', '<leader>e', ':Telescope file_browser<cr><esc>')
 keymap('n', '<leader>ff', ':Telescope find_files<cr>')
 keymap('n', '<leader>fg', ':Telescope live_grep<cr>')
 keymap('n', '<leader>fd', ':Telescope diagnostics<cr><esc>')

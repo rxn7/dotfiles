@@ -11,16 +11,18 @@ packer.startup(function(use)
 	use 'numToStr/Comment.nvim'
 	use 'sheerun/vim-polyglot'
 	use 'tweekmonster/startuptime.vim'
-	use 'nvim-tree/nvim-tree.lua'
 	use 'akinsho/toggleterm.nvim'
 
 	-- Looks
 	use 'kyazdani42/nvim-web-devicons'
 	use 'nvim-lualine/lualine.nvim'
-	use 'luisiacc/handmade-hero-theme'
+
+	-- Themes
+	use 'neanias/everforest-nvim'
 
 	-- Telescope
 	use 'nvim-telescope/telescope.nvim'
+	use 'nvim-telescope/telescope-file-browser.nvim'
 
 	-- Treesitter
 	use {
@@ -45,7 +47,16 @@ packer.startup(function(use)
 	}
 
 	-- Other
-	use 'Exafunction/codeium.vim'
+	use {
+		'Exafunction/codeium.vim',
+		config = function()
+			vim.keymap.set('i', '<c-g>', function() return vim.fn['codeium#Accept']() end, { expr = true })
+			vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
+			vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
+			vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
+		end
+	}
+
 	use 'mattn/emmet-vim'
 	use {
 		'akinsho/git-conflict.nvim',

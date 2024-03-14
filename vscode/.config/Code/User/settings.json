@@ -138,6 +138,6 @@
   "workbench.activityBar.location": "hidden",
   "workbench.iconTheme": "catppuccin-mocha",
   "godot_tools.editor_path": "/usr/bin/godot",
-  "workbench.colorTheme": "poimandres-storm",
+  "workbench.colorTheme": "Zenburn",
   "window.zoomLevel": -1
 }
